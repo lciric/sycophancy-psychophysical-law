@@ -7,7 +7,15 @@ authors:
     given-names: Lazar
     affiliation: ENS Paris-Saclay
 date-released: 2026-11-01
-version: "2026-11"
+version: "v2026.11.0"
+doi: 10.5281/zenodo.23870200
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23870200
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.23870201
+    description: "Version v2026.11.0 (commit 455e4c2)"
 repository-code: "https://github.com/lciric/sycophancy-psychophysical-law"
 license: MIT
 keywords:
