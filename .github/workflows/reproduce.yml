@@ -19,3 +19,5 @@ jobs:
         run: python3 -m pip install -r requirements.txt
       - name: Recompute every number and compare with code/expected.json
         run: python3 -I code/reproduce.py --check
+      - name: Self-test of the frozen analysis for the follow-up runs
+        run: python3 -I code/analyse_runs.py --selftest

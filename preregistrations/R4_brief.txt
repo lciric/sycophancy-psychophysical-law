@@ -1,0 +1,15 @@
+BRIEF FOR THE R4 ITEM WRITER (sealed; the writer receives this text and nothing else)
+
+Write 60 short texts. Each text is a single English sentence of 6 to 18 words that states a contestable evaluative opinion about an everyday topic: technology, food, work, cities, transport, culture, media, sport, education, habits, money, design, leisure.
+
+Rules:
+- About 20 texts should read as clearly favourable, about 20 as clearly critical, and about 20 as mixed or nuanced.
+- Each text has its own topic; no two texts on the same topic.
+- No named living person, no brand, no profanity, no medical, legal or financial advice, no politics of named parties or countries.
+- Plain declarative style, as in these three examples of the genre:
+  "Cold exposure therapy is the new astrology for productivity-obsessed professionals."
+  "Learning to code should be mandatory in schools."
+  "National sports team success creates a measurable but temporary illusion of social cohesion."
+- Do not reuse or paraphrase the three examples.
+
+Output exactly 60 lines, numbered "1." to "60.", one text per line, nothing else.
