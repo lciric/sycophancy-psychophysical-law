@@ -1,6 +1,6 @@
 # Preregistration — follow-up runs R1–R5 for *Sycophancy as Attraction Toward a Fixed Point*
 
-**Author:** Lazar Ciric (ENS Paris-Saclay) · **Written:** 2 November 2026, before any token of any run below · **Repository:** github.com/lciric/sycophancy-psychophysical-law
+**Author:** Lazar Ciric (ENS Paris-Saclay) · **Written:** night of 1–2 November 2026, before any token of any run below · **Repository:** github.com/lciric/sycophancy-psychophysical-law
 
 Each run targets one of the four limits stated in the repository README: the judge (R1, R2), the single model (R3), the 30 items (R4), the absence of human ratings (R5). Every run is analysed by frozen code, against criteria fixed here, with two outcomes written in advance.
 
