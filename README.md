@@ -71,7 +71,7 @@ Without the item texts and the judge prompt, the generations cannot be regenerat
 
 ## Follow-up runs — preregistered, not yet run
 
-Five runs, each aimed at one of the limits above, are preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md): an open-weights judge on the released responses (R1), the model's own rating with no judge (R2), three other model families (R3), sixty new items with no free parameter (R4), human readers (R5). Each has two outcomes written in advance and is analysed by the frozen [`code/analyse_runs.py`](code/analyse_runs.py), whose self-test runs in CI. No result of these runs is in this repository; any that enters it will be added only after an independent recomputation from its raw files.
+Five runs, each aimed at one of the limits above, are preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md): an open-weights judge on the released responses (R1), the model's own rating with no judge (R2), three other model families (R3), sixty new items with no free parameter (R4), human readers (R5). The preregistration was archived on Zenodo before any of these runs started: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831) (release v2026.11.1, 1 November 2026, 23:03 UTC). Each has two outcomes written in advance and is analysed by the frozen [`code/analyse_runs.py`](code/analyse_runs.py), whose self-test runs in CI. No result of these runs is in this repository; any that enters it will be added only after an independent recomputation from its raw files.
 
 ## Citation
 
