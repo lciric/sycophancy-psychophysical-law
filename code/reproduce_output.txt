@@ -1,0 +1,31 @@
+numpy 2.5.3 · seed 20261101 · bootstrap B = 10000 · permutation B = 40000 · arm swap B = 10000
+custody checks passed: item means = means of per-generation ratings; meta.gen_sha = SHA-256 of generation file; seeds follow the declared formulas
+
+CAMPAIGN 1 — Llama-3.1-8B-Instruct, 30 items x K = 10 generations per condition and arm
+arm            g  95% CI                 c  95% CI               R2  LOO R2  mean D
+critical   0.718  [0.577, 0.839]     1.456  [1.228, 1.684]    0.767   0.738  -0.757
+praise     0.678  [0.531, 0.819]     2.937  [2.737, 3.184]    0.787   0.750  +0.260
+shared gain g = 0.696 [0.570, 0.804]; targets 1.423 / 2.927
+g_critical - g_praise = +0.040 [-0.110, 0.198], bootstrap p = 0.58  -> equality not established
+items whose ten seeds recur, attached to another item, in the other campaign: 25/30
+
+RIVAL 1 — no effect (noise and regression to the mean); intra-item permutation, g and c re-estimated
+  critical g = 0.718 vs null median 0.140, p = 2.5e-05 · toward c: 24/29 mobile, null median proportion 0.609, p = 7.3e-03 (proportion) / 3.0e-04 (count, 11/40000); infinite refitted targets in null: 0
+  praise   g = 0.678 vs null median 0.096, p = 2.5e-05 · toward c: 27/27 mobile, null median proportion 0.593, p = 2.5e-05 (proportion) / 5.0e-05 (count, 1/40000); infinite refitted targets in null: 3
+RIVAL 2 — one destination: targets 1.481 apart on either side of unpressured corpus means 2.510 / 2.553; 0/10000 arm-label swaps reach it (p = 1.0e-04; null max 1.122)
+RIVAL 3 — directional push: 11 praise items above c move by -0.673 under praise (10 descend); no-effect null median -0.067, p = 1.6e-03
+  count of descents alone: null median 8, p = 0.35  -> the count does not discriminate, the magnitude does
+  above the CI upper bound 3.184: 8/9 descend
+  selection-free halves (select on 5 unpressured generations, measure on the other 5): 8/10 descend, mean -0.640 ; 8/13 descend, mean -0.354
+
+CAMPAIGN 2 — 40 items (ids 0-29 + 10 new) x K = 5, three prefix strata; r(unpressured means, ids 0-29 vs campaign 1) = 0.948 / 0.970
+cell               g  95% CI                 c  95% CI               R2
+S0_critical    0.712  [0.578, 0.836]     1.468  [1.226, 1.702]    0.728
+S0_praise      0.768  [0.583, 0.951]     2.838  [2.611, 3.063]    0.698
+Sp_critical    0.764  [0.603, 0.922]     1.600  [1.302, 1.851]    0.711
+Sp_praise      0.629  [0.491, 0.784]     2.535  [2.296, 2.729]    0.698
+Sm_critical    0.744  [0.622, 0.841]     1.255  [1.137, 1.379]    0.880
+Sm_praise      0.802  [0.674, 0.915]     1.904  [1.769, 2.040]    0.860
+campaign-1 law applied to S0 with no free parameter:
+  critical R2 = 0.728 (refit 0.728) · 10 new items alone R2 = 0.822 · toward the campaign-1 target 32/36, null median 0.562, p = 2.5e-05
+  praise   R2 = 0.686 (refit 0.698) · 10 new items alone R2 = 0.594 · toward the campaign-1 target 30/32, null median 0.657, p = 2.0e-04

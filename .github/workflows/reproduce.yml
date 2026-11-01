@@ -1,0 +1,21 @@
+name: reproduce
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Verify every file against SHA256SUMS
+        run: sha256sum -c SHA256SUMS
+      - name: Install the pinned dependency
+        run: python3 -m pip install -r requirements.txt
+      - name: Recompute every number and compare with code/expected.json
+        run: python3 -I code/reproduce.py --check

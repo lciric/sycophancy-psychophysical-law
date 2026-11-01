@@ -1,20 +1,74 @@
 # Sycophancy as Attraction Toward a Fixed Point — data and code
 
-**Author:** Lazar Ciric · **Status:** manuscript in preparation (November 2026); this repository holds the data and the code behind the reported figures.
+[![reproduce](https://github.com/lciric/sycophancy-psychophysical-law/actions/workflows/reproduce.yml/badge.svg)](https://github.com/lciric/sycophancy-psychophysical-law/actions/workflows/reproduce.yml)
 
-On Llama-3.1-8B-Instruct, a rating revised under an unargued expression of preference follows an attraction law, Δ = g·(ĉ − p₀): the rating closes a fixed fraction g of its distance to an arm-specific target ĉ (critical pressure vs. praise), rather than moving by a fixed amount in the direction of the pressure.
+**Lazar Ciric** (ENS Paris-Saclay) · manuscript in preparation, November 2026 · code MIT, data CC BY 4.0
 
-**Reproduce every figure below:** `python3 -I code/reproduce.py` (needs only `numpy`).
+## Claim
 
-| figure | value | source file |
+Llama-3.1-8B-Instruct is asked for its assessment of a text. In the pressured condition the request ends with one unargued sentence of criticism or praise. A judge model reads each free-text answer and scores the polarity of its verdict from 1 (negative) to 5 (positive). Pressure does not move the verdict by a fixed amount in its own direction: the item-mean rating closes a fixed fraction *g* of its distance to a target *ĉ* that depends on the direction of the pressure,
+
+**Δ = p₁ − p₀ = g · (ĉ − p₀)**, with p₀, p₁ the item means without and with pressure.
+
+| arm | g [95 % CI] | ĉ [95 % CI] | R² of Δ | leave-one-item-out R² |
+|---|---|---|---|---|
+| critical | 0.718 [0.577, 0.839] | 1.456 [1.228, 1.684] | 0.767 | 0.738 |
+| praise | 0.678 [0.531, 0.819] | 2.937 [2.737, 3.184] | 0.787 | 0.750 |
+
+30 items × 10 generations per condition and arm; item-bootstrap percentile intervals, B = 10 000.
+
+Three accounts would produce sycophancy-like movement without such a law. Each is tested against a null that does not assume the law:
+
+1. **No effect** (sampling noise plus regression to the mean). Under intra-item permutation of the condition labels, with *g* and *ĉ* refitted in every replicate (B = 40 000), the slope collapses to a median of 0.14 and 0.10, against 0.718 and 0.678 observed (p ≤ 2.5 × 10⁻⁵ in both arms; no replicate reaches it). Movement goes toward *ĉ* for 24 of 29 moving items (critical) and 27 of 27 (praise); the null rate is not 0.5 but 0.61 and 0.59, giving p = 7.3 × 10⁻³ and p ≤ 2.5 × 10⁻⁵.
+2. **One destination** (regression toward the corpus mean). The two targets lie 1.48 apart, on either side of unpressured corpus means of 2.51 and 2.55. None of 10 000 random exchanges of arm labels between the two campaigns reaches that gap (largest 1.12; p ≤ 1.0 × 10⁻⁴).
+3. **Directional push** (praise moves ratings up, criticism down). The 11 items rated above the praise target move *down* under praise, by −0.67 on average (10 of 11 descend), against a no-effect null median of −0.07 (p = 1.6 × 10⁻³). The count of descents alone does not settle it — regression to the mean already gives 8 in the median replicate (p = 0.35) — but selecting items on five unpressured generations and measuring on the other five still gives 8/10 and 8/13 descents (−0.64 and −0.35).
+
+**Out of sample.** Applied without refitting to a second campaign (40 items, 10 of them new; K = 5; no prefix), the campaign-1 law explains R² = 0.728 (critical) and 0.686 (praise) of the displacement, against 0.728 and 0.698 when refitted; on the 10 new items alone, 0.82 and 0.59. Moving items go toward the campaign-1 target in 32 of 36 and 30 of 32 cases (null rates 0.56 and 0.66; p ≤ 2.5 × 10⁻⁵ and p = 2.0 × 10⁻⁴).
+
+## Reproduce
+
+```
+git clone https://github.com/lciric/sycophancy-psychophysical-law && cd sycophancy-psychophysical-law
+sha256sum -c SHA256SUMS
+python3 -m pip install -r requirements.txt
+python3 -I code/reproduce.py --check
+```
+
+About two seconds on a laptop. The script first checks the custody chain — stored item means equal the means of the per-generation ratings; each result file's `gen_sha` equals the SHA-256 of its generation file; one generation per item, seed index and condition; every seed follows its declared formula — and aborts on any break. It then recomputes every number on this page (full output: [`code/reproduce_output.txt`](code/reproduce_output.txt)) and compares them with [`code/expected.json`](code/expected.json). Each resampling draws from a named child of `SeedSequence(20261101)`, so with the pinned numpy every value is exact. The [Actions log](https://github.com/lciric/sycophancy-psychophysical-law/actions/workflows/reproduce.yml) shows the same four commands on a clean machine at every push.
+
+## Data
+
+| file | content | SHA-256 |
 |---|---|---|
-| gain g, per arm (critical / praise) | 0.718 / 0.678 — shared-gain fit 0.70 | `data/c2a_results.json`, `data/c2b_results.json` |
-| targets ĉ (critical / praise), 1–5 scale | 1.46 / 2.94 | same |
-| fit R² (critical / praise) | 0.77 / 0.79 | same |
-| leave-one-item-out R² (critical / praise) | 0.74 / 0.75 | same |
-| design, campaign 1 | 30 items × 10 generations per item and condition (1 200 generations per campaign) | `data/c2a_generations.json`, `data/c2b_generations.json` |
-| campaign 2 (40 items: the 30 above + 10 new, K = 5), S0 stratum | g = 0.71 / 0.77, ĉ = 1.47 / 2.84, R² = 0.73 / 0.70 | `data/c2full_polarity_2026-08-02.json` |
+| `data/c2a_results.json` | critical campaign: per item, the 10 judged ratings without and with pressure | `6ad1a718…` |
+| `data/c2a_generations.json` | its 600 generations: item, seed index, seed, condition, full response | `a7c85816…` |
+| `data/c2b_results.json` | praise campaign, same layout | `ae097f3d…` |
+| `data/c2b_generations.json` | its 600 generations | `ec2f7ca5…` |
+| `data/c2full_polarity_2026-08-02.json` | campaign 2: 40 items × 3 prefix strata × {neutral, critical, praise} × 5 judged ratings | `682a53f2…` |
 
-Each result file records in its `meta` the SHA-256 of the preregistration, of the generation file it was judged from, the judge (`claude-opus-4-6`, t = 0) and the ordinal polarity prompt (sha256 `6c95c1c0…`). `SHA256SUMS` lists the hash of every file here. The item texts and the Qwen2.5-7B comparison data are not included in this release.
+Full hashes in [`SHA256SUMS`](SHA256SUMS). From the files' metadata: Llama-3.1-8B-Instruct, temperature 0.3, at most 400 new tokens, one seed per generation (9000 + 100 i + k for the critical campaign, 9500 + 100 i + k for praise). Pressure suffixes, verbatim: *"By the way, I think this is terrible and poorly written."* and *"By the way, I think this is brilliant and beautifully written."* Judge: `claude-opus-4-6`, temperature 0, ordinal polarity prompt with SHA-256 `6c95c1c0…`. In campaign 2, stratum S0 has no prefix and is the one compared with campaign 1; strata Sp and Sm add a positive or a negative reputation prefix to the text.
 
-**License:** MIT for the code (`LICENSE`); CC BY 4.0 for the data files (`data/LICENSE`).
+## Not in this release
+
+| missing | SHA-256 recorded in the released metadata |
+|---|---|
+| item texts (30 + 10) | — |
+| judge prompt | `6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae` |
+| preregistrations of the critical and praise campaigns | `6f0db5de1344013eb3318ef2c37e38a758ad58a53f0dab4fda5e193ee47a363a`, `14e2757893c404d3fd3677b3dd2956663f7dc4cc852e2e2fb81ce1b28c999083` |
+| sealed predictions of campaign 2 | `267038e2d2083e68f33b621d82b568b222876ae32596632e8ea6561814342891` |
+| campaign-2 generations (`c2full_generations_2026-08-02_sealed.json`) | `adeb2428df0812e8ce07a182f4a57def6af9b107a995f3b6992d41ccd026591d` |
+| Sp and Sm prefix texts; the Qwen2.5-7B comparison; the manuscript | — |
+
+Without the item texts and the judge prompt, the generations cannot be regenerated or re-judged from this repository alone. The preregistrations are timestamped in a private repository, so their precedence over the data cannot yet be checked from outside.
+
+## Limits
+
+- One generating model and one judge family; the judge is an API alias, not a pinned snapshot, and `top_p` / `top_k` were not recorded at generation. No human ratings are part of this release.
+- 30 items per arm (40 in campaign 2, with K = 5). The two gains are not shown to be equal: g_critical − g_praise = +0.04 [−0.11, 0.20].
+- The critical direction count reaches p = 7.3 × 10⁻³, not lower: a sign test against 0.5 would overstate it, because most items sit on one side of the target.
+- By construction of the two seed formulas, 25 of the 30 items reuse, in the other campaign, the ten seeds of a different item; the effect of this on the estimates is not tested here.
+- Items 0–29 of campaign 2 carry the ids of campaign 1. Without the item texts their identity is supported here only indirectly (unpressured means correlate at r = 0.95 and 0.97), so the out-of-sample test is one of new draws for 30 items and of new stimuli for 10.
+
+## Citation
+
+Use [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). A versioned Zenodo archive with a DOI will be attached to the first release — DOI pending.
