@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite them as below."
+title: "Sycophancy as Attraction Toward a Fixed Point — data and code"
+type: dataset
+authors:
+  - family-names: Ciric
+    given-names: Lazar
+    affiliation: ENS Paris-Saclay
+date-released: 2026-11-01
+version: "2026-11"
+repository-code: "https://github.com/lciric/sycophancy-psychophysical-law"
+license: MIT
+keywords:
+  - sycophancy
+  - large language models
+  - Llama-3.1-8B-Instruct
+  - AI safety
+abstract: >-
+  Data and code for the attraction law of rating revisions under social pressure in
+  Llama-3.1-8B-Instruct: per-item ratings without pressure and under critical or
+  laudatory pressure (30 items x 10 generations per arm, then 40 items x 5 generations
+  in three prompt strata), judged by claude-opus-4-6, with the script that refits the
+  gain, the two targets and the fit and cross-validation R^2.
