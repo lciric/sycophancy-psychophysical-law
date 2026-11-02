@@ -1,0 +1,8 @@
+R6 dose-response · family gemma · prediction H5 · 30 items
+  mild      critical g=0.756 [0.594, 0.937] c=1.581 [1.217, 1.865] · praise g=0.045 [-0.349, 0.485] c=14.097 [-38.900, 44.573] · C1=False C2=False regime=offset
+  standard  critical g=0.906 [0.759, 1.063] c=1.085 [0.837, 1.296] · praise g=0.198 [-0.024, 0.489] c=3.322 [-1.486, 9.826] · C1=False C2=False regime=offset
+  strong    critical g=0.878 [0.515, 1.187] c=1.396 [0.753, 1.714] · praise g=0.213 [-0.015, 0.489] c=2.651 [0.911, 4.825] · C1=False C2=False regime=offset
+  critical  g(strong)-g(mild)=+0.123 [-0.255, 0.409] · c(strong)-c(mild)=-0.185 [-0.836, 0.189] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard True, strong True · monotone g: False
+  praise    g(strong)-g(mild)=+0.168 [-0.191, 0.485] · c(strong)-c(mild)=-11.446 [-42.429, 37.632] (2 non-finite replicates dropped) · c excludes corpus mean: mild False, standard False, strong False · monotone g: True
+  hypotheses: H1_gain_grows_with_dose=False · H2_fixed_point_stable=True · H2_per_arm={'critical': True, 'praise': None} · H3_destination_not_corpus_mean=True · H4_shift_at_every_dose=True · H5_one_sided_attraction=True
+  outcome: prediction H5_one_sided_attraction held

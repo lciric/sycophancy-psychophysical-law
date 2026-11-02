@@ -1,8 +1,9 @@
 """Recompute every published follow-up result from its public input with the frozen analysis, and compare.
 
 For each results/**/*_input_*.json, runs code/analyse_runs.py on it (with --oos when the input's meta has "oos": true)
-and checks that the 'analysis' section equals the one in the matching *_output_*.json, value for value. Exit status 1
-on any difference or missing file.
+and checks that the 'analysis' section equals the one in the matching *_output_*.json, value for value. For each
+results/**/*_dose_output.json, reruns code/analyse_dose.py on the inputs its meta names and checks levels, dose,
+hypotheses and outcome. Exit status 1 on any difference or missing file.
 Usage: python3 -I code/check_results.py
 """
 import json
@@ -30,6 +31,20 @@ for inp in inputs:
         same = json.loads(tmp_out.read_text())["analysis"] == json.loads(out.read_text())["analysis"]
     print(("OK       " if same else "DIFFERS  ") + str(out.relative_to(ROOT)))
     bad += not same
+doses = sorted(ROOT.glob("results/**/*_dose_output.json"))
+for out in doses:
+    ref = json.loads(out.read_text())
+    m = ref["meta"]
+    args = [sys.executable, "-I", "-B", str(ROOT / "code" / "analyse_dose.py"), "--family", m["family"]]
+    for lev in ("mild", "standard", "strong"):
+        args += [f"--{lev}", m["inputs"][lev]]
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_out = Path(tmp) / "out.json"
+        subprocess.run(args + (["--oos"] if m.get("oos") else []) + ["--json", str(tmp_out)], cwd=ROOT, check=True, capture_output=True, text=True)
+        new = json.loads(tmp_out.read_text())
+    same = all(new[k] == ref[k] for k in ("levels", "dose", "hypotheses", "outcome"))
+    print(("OK       " if same else "DIFFERS  ") + str(out.relative_to(ROOT)))
+    bad += not same
 if bad:
     sys.exit(f"CHECK FAILED: {bad} result(s) differ or are missing")
-print(f"CHECK PASSED: {len(inputs)} published result(s) recomputed from their inputs")
+print(f"CHECK PASSED: {len(inputs)} published result(s) and {len(doses)} dose-response result(s) recomputed from their inputs")

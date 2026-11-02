@@ -1,0 +1,5 @@
+run: R6, Qwen2.5-7B-Instruct, dose strong · reader: judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation) · subject: Qwen2.5-7B-Instruct, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision a09a3545... logged at download
+  critical  n=30 K=5  g=0.217 [-0.056, 0.465]  c=0.336 [-19.243, 20.863]  R2=0.088 LOO=-0.051  mean D=-0.580 [-0.767, -0.393]  slope p=1.6e-01  toward c 24/27 p=3.1e-03
+  praise    n=30 K=5  g=0.190 [0.017, 0.382]  c=1.786 [-3.261, 2.793]  R2=0.092 LOO=-0.018  mean D=-0.233 [-0.393, -0.067]  slope p=4.1e-02  toward c 18/24 p=9.8e-02
+  targets 1.450 apart, arm-swap p=5.0e-01 · shared g=0.203 [0.024, 0.381]
+  criteria: C1_attraction=False · C2_two_destinations=False · regime=offset

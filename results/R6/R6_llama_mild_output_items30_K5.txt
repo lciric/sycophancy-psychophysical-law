@@ -1,0 +1,7 @@
+run: R6, Llama-3.1-8B-Instruct, dose mild · reader: judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation) · subject: Llama-3.1-8B-Instruct, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision 0e9e39f2... logged at download
+  critical  n=30 K=5  g=0.658 [0.435, 0.821]  c=1.867 [1.605, 2.143]  R2=0.639 LOO=0.583  mean D=-0.473 [-0.840, -0.133]  slope p=2.5e-05  toward c 22/24 p=4.2e-04
+  praise    n=30 K=5  g=0.276 [0.073, 0.472]  c=4.011 [3.082, 8.550]  R2=0.239 LOO=0.109  mean D=+0.393 [0.153, 0.633]  slope p=1.8e-03  toward c 22/27 p=1.3e-02
+  targets 2.144 apart, arm-swap p=2.0e-04 · shared g=0.467 [0.289, 0.615]
+  out of sample critical  R2 law=0.516 shift=-0.083  SSE(shift)-SSE(law)=+17.443 [3.247, 31.279]  toward campaign-1 target p=8.7e-04
+  out of sample praise    R2 law=-0.320 shift=-0.039  SSE(shift)-SSE(law)=-3.859 [-14.746, 7.500]  toward campaign-1 target p=9.0e-03
+  criteria: C1_attraction=True · C2_two_destinations=True · C3_law_beats_shift_out_of_sample=False · C4_toward_campaign1_target=True · regime=attraction

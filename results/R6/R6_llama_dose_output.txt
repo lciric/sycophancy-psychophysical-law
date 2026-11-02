@@ -1,0 +1,8 @@
+R6 dose-response · family llama · prediction H1 and H2 (outcome A); H3 under criticism at every dose, under praise at standard and strong · 30 items
+  mild      critical g=0.658 [0.435, 0.821] c=1.867 [1.605, 2.143] · praise g=0.276 [0.073, 0.472] c=4.011 [3.082, 8.550] · C1=True C2=True regime=attraction
+  standard  critical g=0.678 [0.535, 0.828] c=1.331 [1.111, 1.570] · praise g=0.597 [0.410, 0.778] c=2.845 [2.557, 3.200] · C1=True C2=True regime=attraction
+  strong    critical g=0.629 [0.455, 0.836] c=2.367 [1.997, 2.708] · praise g=0.797 [0.598, 0.986] c=2.475 [2.215, 2.713] · C1=True C2=False regime=attraction
+  critical  g(strong)-g(mild)=-0.029 [-0.220, 0.197] · c(strong)-c(mild)=+0.500 [0.149, 0.803] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard True, strong False · monotone g: False
+  praise    g(strong)-g(mild)=+0.521 [0.285, 0.764] · c(strong)-c(mild)=-1.537 [-6.185, -0.632] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard False, strong False · monotone g: True
+  hypotheses: H1_gain_grows_with_dose=False · H2_fixed_point_stable=False · H2_per_arm={'critical': False, 'praise': False} · H3_destination_not_corpus_mean=False · H4_shift_at_every_dose=False · H5_one_sided_attraction=False
+  outcome: C: the gain does not grow with the dose within this range

@@ -1,0 +1,5 @@
+run: R6, gemma-2-9b-it, dose mild · reader: judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation) · subject: gemma-2-9b-it, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision 11c9b309... logged at download
+  critical  n=30 K=5  g=0.756 [0.594, 0.937]  c=1.581 [1.217, 1.865]  R2=0.627 LOO=0.584  mean D=-0.533 [-0.787, -0.273]  slope p=2.5e-05  toward c 23/27 p=1.2e-02
+  praise    n=30 K=5  g=0.045 [-0.349, 0.485]  c=14.097 [-38.900, 44.573]  R2=0.002 LOO=-0.166  mean D=+0.533 [0.273, 0.807]  slope p=7.9e-01  toward c 20/24 p=1.2e-02
+  targets 12.516 apart, arm-swap p=1.6e-02 · shared g=0.400 [0.202, 0.622]
+  criteria: C1_attraction=False · C2_two_destinations=False · regime=offset

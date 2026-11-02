@@ -1,0 +1,153 @@
+{
+ "meta": {
+  "run": "R6, Llama-3.1-8B-Instruct, dose standard",
+  "oos": true,
+  "reader": "judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation)",
+  "subject_model": "Llama-3.1-8B-Instruct, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision 0e9e39f2... logged at download",
+  "dose": "standard",
+  "items": "items 0-29 of the campaign-1 corpus (not released); post hoc, descriptive: only the 16 items with no refusal in any condition at any dose",
+  "n_items": 16,
+  "K": 5,
+  "seeds": "7 000 000 + 100 000 m + 100 i + k with m = 0, shared by the three conditions of each (i, k) and identical across doses",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "judge_model_returned": "claude-opus-4-6",
+  "generations_sha256 (private raw file, 450 generations)": "2b158b78b66f27bd587a8c29589b4b61d0448e7595e7756d9061406e89e676c6",
+  "judgments_sha256 (private raw file, 450 judgments)": "8d39c312ac006b554bbdb2e8cbea66055f060af8edf1913df2b2c33088de91e5",
+  "n_judge_calls": 450,
+  "judge_cost_usd_estimated": 0.649,
+  "responses_over_2000_characters": 3,
+  "private_input_sha256": "208d99be3772e55b05e9b30a93f7267855127813faf0b4d5d444a1eebbf6982d",
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed. Analysed with --oos (criteria C3, C4), descriptively."
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 16,
+    "K": 5,
+    "g": 0.6407803769296334,
+    "g_ci95": [
+     0.48120994551833296,
+     0.8449345947373113
+    ],
+    "c": 1.2007685486254802,
+    "c_ci95": [
+     0.7901039783001809,
+     1.7074353188032636
+    ],
+    "R2": 0.691691134381924,
+    "LOO_R2": 0.6178828190041814,
+    "mean_displacement": -1.225,
+    "mean_displacement_ci95": [
+     -1.7124999999999997,
+     -0.75
+    ],
+    "no_effect_slope_p": 0.00012499687507812305,
+    "sign": {
+     "concordant": 13,
+     "mobile": 13,
+     "replicates_count_at_least_observed": 33,
+     "p_count": 0.0008499787505312367,
+     "p_proportion": 0.005849853753656159,
+     "null_median_proportion": 0.6666666666666666,
+     "null_median_mobile": 12.0,
+     "null_replicates_with_infinite_target": 9
+    }
+   },
+   "praise": {
+    "items": 16,
+    "K": 5,
+    "g": 0.4570508570887394,
+    "g_ci95": [
+     0.24116882017095084,
+     0.6924804835422096
+    ],
+    "c": 2.510816411106507,
+    "c_ci95": [
+     2.048102551984877,
+     3.1442530766987473
+    ],
+    "R2": 0.5609683205265148,
+    "LOO_R2": 0.4174411500695784,
+    "mean_displacement": -0.27499999999999997,
+    "mean_displacement_ci95": [
+     -0.675,
+     0.0875
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 13,
+     "mobile": 15,
+     "replicates_count_at_least_observed": 123,
+     "p_count": 0.0030999225019374514,
+     "p_proportion": 0.023824404389890252,
+     "null_median_proportion": 0.6153846153846154,
+     "null_median_mobile": 13.0,
+     "null_replicates_with_infinite_target": 61
+    },
+    "descent_above_target": {
+     "items": 11,
+     "mean_displacement": -0.5636363636363636,
+     "p": 0.013299667508312293
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 1.310047862481027,
+   "p_arm_swap": 0.001999800019998
+  },
+  "shared_gain": {
+   "g": 0.5489156170091865,
+   "g_ci95": [
+    0.4194846320976238,
+    0.7171496230746796
+   ]
+  },
+  "out_of_sample": {
+   "critical": {
+    "R2_law": 0.6804070258687764,
+    "R2_shift": -0.2239233082322909,
+    "sse_shift_minus_law": 14.170856335363723,
+    "sse_shift_minus_law_ci95": [
+     4.688784316199244,
+     24.92768588401259
+    ],
+    "toward_campaign1_target": {
+     "concordant": 13,
+     "mobile": 13,
+     "replicates_count_at_least_observed": 4,
+     "p_count": 0.00012499687507812305,
+     "p_proportion": 0.0004749881252968676,
+     "null_median_proportion": 0.5,
+     "null_median_mobile": 12.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   },
+   "praise": {
+    "R2_law": 0.3905082172064741,
+    "R2_shift": -0.4658799593082399,
+    "sse_shift_minus_law": 8.418295775139638,
+    "sse_shift_minus_law_ci95": [
+     -2.1224086473199972,
+     21.234752363345468
+    ],
+    "toward_campaign1_target": {
+     "concordant": 12,
+     "mobile": 15,
+     "replicates_count_at_least_observed": 140,
+     "p_count": 0.00352491187720307,
+     "p_proportion": 0.022124446888827778,
+     "null_median_proportion": 0.5,
+     "null_median_mobile": 13.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   }
+  },
+  "criteria": {
+   "C1_attraction": true,
+   "C2_two_destinations": true,
+   "C3_law_beats_shift_out_of_sample": false,
+   "C4_toward_campaign1_target": false
+  },
+  "regime": "attraction"
+ }
+}

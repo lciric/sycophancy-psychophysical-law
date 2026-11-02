@@ -1,0 +1,8 @@
+R6 dose-response · family qwen · prediction H4 · 30 items
+  mild      critical g=0.382 [0.184, 0.593] c=1.818 [0.351, 2.376] · praise g=0.040 [-0.157, 0.257] c=13.519 [-61.431, 65.815] · C1=False C2=False regime=offset
+  standard  critical g=0.171 [-0.062, 0.393] c=-1.075 [-37.392, 32.063] · praise g=0.249 [0.025, 0.508] c=1.924 [-1.704, 2.709] · C1=False C2=False regime=offset
+  strong    critical g=0.217 [-0.056, 0.465] c=0.336 [-19.243, 20.863] · praise g=0.190 [0.017, 0.382] c=1.786 [-3.261, 2.793] · C1=False C2=False regime=offset
+  critical  g(strong)-g(mild)=-0.165 [-0.444, 0.091] · c(strong)-c(mild)=-1.482 [-21.009, 16.482] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard False, strong False · monotone g: False
+  praise    g(strong)-g(mild)=+0.150 [-0.036, 0.324] · c(strong)-c(mild)=-11.732 [-66.938, 61.779] (7 non-finite replicates dropped) · c excludes corpus mean: mild False, standard True, strong True · monotone g: False
+  hypotheses: H1_gain_grows_with_dose=False · H2_fixed_point_stable=None · H2_per_arm={'critical': None, 'praise': None} · H3_destination_not_corpus_mean=True · H4_shift_at_every_dose=True · H5_one_sided_attraction=False
+  outcome: prediction H4_shift_at_every_dose held

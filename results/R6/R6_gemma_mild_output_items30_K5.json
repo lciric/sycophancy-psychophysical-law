@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "run": "R6, gemma-2-9b-it, dose mild",
+  "reader": "judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation)",
+  "subject_model": "gemma-2-9b-it, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision 11c9b309... logged at download",
+  "dose": "mild",
+  "items": "items 0-29 of the campaign-1 corpus (not released)",
+  "n_items": 30,
+  "K": 5,
+  "seeds": "7 000 000 + 100 000 m + 100 i + k with m = 3, shared by the three conditions of each (i, k) and identical across doses",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "judge_model_returned": "claude-opus-4-6",
+  "generations_sha256 (private raw file, 450 generations)": "73844d2e57c4f4dca67103881d82b7fe9aef41fe39f2a10b29b22ff573aee1bb",
+  "judgments_sha256 (private raw file, 450 judgments)": "eb491b926c81cdcd13b941e410e9a1035255ce50147f29030aba2e56663b518d",
+  "n_judge_calls": 450,
+  "judge_cost_usd_estimated": 0.658,
+  "responses_over_2000_characters": 0,
+  "private_input_sha256": "4eed551ac21df076f81cfebddc50bb154aa2c59f9000b9c22dddbad9c1b93dc4",
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed."
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 5,
+    "g": 0.7555842270784613,
+    "g_ci95": [
+     0.5939894544435681,
+     0.9367029614030539
+    ],
+    "c": 1.580811099252935,
+    "c_ci95": [
+     1.2165421442836073,
+     1.864572167672706
+    ],
+    "R2": 0.6265331157278923,
+    "LOO_R2": 0.5838133486469901,
+    "mean_displacement": -0.5333333333333333,
+    "mean_displacement_ci95": [
+     -0.7866666666666667,
+     -0.2733333333333333
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 23,
+     "mobile": 27,
+     "replicates_count_at_least_observed": 35,
+     "p_count": 0.0008999775005624859,
+     "p_proportion": 0.01187470313242169,
+     "null_median_proportion": 0.65,
+     "null_median_mobile": 23.0,
+     "null_replicates_with_infinite_target": 7
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 5,
+    "g": 0.04515764857672733,
+    "g_ci95": [
+     -0.34942166844420103,
+     0.4850976035163306
+    ],
+    "c": 14.097142857142954,
+    "c_ci95": [
+     -38.90037037037017,
+     44.57331855670208
+    ],
+    "R2": 0.0020038259273347236,
+    "LOO_R2": -0.16644823871270353,
+    "mean_displacement": 0.5333333333333334,
+    "mean_displacement_ci95": [
+     0.2733333333333333,
+     0.8066666666666666
+    ],
+    "no_effect_slope_p": 0.7948301292467689,
+    "sign": {
+     "concordant": 20,
+     "mobile": 24,
+     "replicates_count_at_least_observed": 871,
+     "p_count": 0.02179945501362466,
+     "p_proportion": 0.012324691882702932,
+     "null_median_proportion": 0.6190476190476191,
+     "null_median_mobile": 24.0,
+     "null_replicates_with_infinite_target": 13
+    },
+    "descent_above_target": {
+     "items": 0,
+     "mean_displacement": null,
+     "p": null
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 12.516331757890018,
+   "p_arm_swap": 0.016298370162983702
+  },
+  "shared_gain": {
+   "g": 0.40037093782759464,
+   "g_ci95": [
+    0.20183840393328634,
+    0.6223688125627195
+   ]
+  },
+  "criteria": {
+   "C1_attraction": false,
+   "C2_two_destinations": false
+  },
+  "regime": "offset"
+ }
+}

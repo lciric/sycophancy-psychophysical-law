@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 17:38 Paris (16:38 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 19:12 Paris (18:12 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -12,11 +12,12 @@
 | **R1a**: open-weights judge (Qwen2.5-7B) on the released responses, 360 readings | the judge | C1 and C2 hold (outcome A), with a C2 margin of 0.53. Gains 0.74 and 0.73, against 0.72 and 0.68 with the original judge. See [`results/R1a/`](results/R1a/README.md). |
 | **R1b**: open-weights judge (Qwen2.5-72B) on all 1 200 released responses | the judge | C1 and C2 hold at full scale (outcome A), with a C2 margin of 0.76. Gains 0.65 and 0.74. The argmax reading agrees. See [`results/R1b/`](results/R1b/README.md). |
 | **R3**: Qwen2.5-7B, Mistral-7B-v0.3 and Gemma-2-9B, 40 items × 3 conditions × K = 10 | one model | All three fail C1 and C2 (regime offset). Qwen and Mistral shift every item by about the same amount; for Qwen this is the preregistered outcome A. Gemma shows a strong attraction under criticism only (g = 0.93). See [`results/R3/`](results/R3/README.md). |
+| **R6**: three intensities of the pressure sentence, four families, 30 items, K = 5 (addendum archived before any token) | the wording of the pressure | Llama: **outcome C**, not the predicted A. The law is found again at the campaign-1 wording, but the gain does not grow with intensity under criticism, and the destination moves with the wording; at the strongest wording the rating is set back toward the middle. Qwen (offset) and Gemma (criticism only) hold their predictions; Mistral does not (attraction at the mild and strong doses). See [`results/R6/`](results/R6/README.md). |
 | **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. Without the items with refusals, all four criteria still hold. See [`results/R4/`](results/R4/README.md). |
 
 ## Running (times are Paris, 2 November)
 
-**R6, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R6_dose_response.md`](preregistrations/2026-11-02_addendum_R6_dose_response.md)): three intensities of the pressure sentence on the four families, 30 items, K = 5, analysed by the frozen [`code/analyse_dose.py`](code/analyse_dose.py). Archived before any R6 token in release v2026.11.3, [10.5281/zenodo.23888058](https://doi.org/10.5281/zenodo.23888058), 2 November 2026, 14:42 UTC (an identical copy, v2026.11.2, at 14:39 UTC). **Running** since 15:45, on 12 GPU machines, the four families in parallel. A first check holds while it runs: within each family, the unpressured generations that two doses share are identical byte for byte, as their seeds are.
+**R6, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R6_dose_response.md`](preregistrations/2026-11-02_addendum_R6_dose_response.md)): three intensities of the pressure sentence on the four families, 30 items, K = 5, analysed by the frozen [`code/analyse_dose.py`](code/analyse_dose.py). Archived before any R6 token in release v2026.11.3, [10.5281/zenodo.23888058](https://doi.org/10.5281/zenodo.23888058), 2 November 2026, 14:42 UTC (an identical copy, v2026.11.2, at 14:39 UTC). **Done**: 5 400 generations from 16:17 to 18:04, judged from 17:29 to 18:28, independently rechecked; result under Done above.
 
 Each addendum fixes in advance what each of its outcomes means.
 
@@ -43,9 +44,8 @@ R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 ## Next, today
 
-1. Finish R6; then an independent recomputation, then `results/R6/`.
-2. Archive the R7 addendum, sign its budget, run R7; then an independent recomputation, then `results/R7/`.
-3. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+1. Archive the R7 addendum (release v2026.11.4), run R7 (budget signed); then an independent recomputation, then `results/R7/`.
+2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 

@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "run": "R6, Mistral-7B-Instruct-v0.3, dose standard",
+  "reader": "judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation)",
+  "subject_model": "Mistral-7B-Instruct-v0.3 (loaded through the TransformerLens v0.1 converter, v0.3 name added), fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision c170c708... logged at download",
+  "dose": "standard",
+  "items": "items 0-29 of the campaign-1 corpus (not released)",
+  "n_items": 30,
+  "K": 5,
+  "seeds": "7 000 000 + 100 000 m + 100 i + k with m = 2, shared by the three conditions of each (i, k) and identical across doses",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "judge_model_returned": "claude-opus-4-6",
+  "generations_sha256 (private raw file, 450 generations)": "a06b3e2294f4d093b10828cdf1e994eea270a4eae7c0dc82ee879e7241078898",
+  "judgments_sha256 (private raw file, 450 judgments)": "88f3501c634bd562b21af3e108037b786bd79a38f9fd33cb497d0bb6a4d7645f",
+  "n_judge_calls": 450,
+  "judge_cost_usd_estimated": 0.622,
+  "responses_over_2000_characters": 0,
+  "private_input_sha256": "e3be8bfeb3def8aed33b9684ebe07c5c2c7feead77df1e9f00b11c21d64c5969",
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed."
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 5,
+    "g": 0.37012065294535135,
+    "g_ci95": [
+     -0.01847323163116647,
+     0.9627146361974881
+    ],
+    "c": 0.6811121764141905,
+    "c_ci95": [
+     -15.931622298778668,
+     10.014954545454547
+    ],
+    "R2": 0.09130459816035996,
+    "LOO_R2": -0.05890814080725559,
+    "mean_displacement": -0.8533333333333333,
+    "mean_displacement_ci95": [
+     -1.0800000000000003,
+     -0.6398333333333357
+    ],
+    "no_effect_slope_p": 0.2530686732831679,
+    "sign": {
+     "concordant": 27,
+     "mobile": 29,
+     "replicates_count_at_least_observed": 2,
+     "p_count": 7.499812504687383e-05,
+     "p_proportion": 0.0013249668758281044,
+     "null_median_proportion": 0.6818181818181818,
+     "null_median_mobile": 24.0,
+     "null_replicates_with_infinite_target": 1
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 5,
+    "g": 0.6930447125621009,
+    "g_ci95": [
+     0.29157635259849335,
+     1.223438646182777
+    ],
+    "c": 4.256426011264721,
+    "c_ci95": [
+     3.6266848991848994,
+     5.9860820105820105
+    ],
+    "R2": 0.23547604795298915,
+    "LOO_R2": 0.12603606363113562,
+    "mean_displacement": 0.88,
+    "mean_displacement_ci95": [
+     0.6133333333333334,
+     1.1266666666666665
+    ],
+    "no_effect_slope_p": 0.002174945626359341,
+    "sign": {
+     "concordant": 25,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 427,
+     "p_count": 0.010699732506687333,
+     "p_proportion": 0.14439639009024774,
+     "null_median_proportion": 0.7391304347826086,
+     "null_median_mobile": 26.0,
+     "null_replicates_with_infinite_target": 1
+    },
+    "descent_above_target": {
+     "items": 0,
+     "mean_displacement": null,
+     "p": null
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 3.5753138348505304,
+   "p_arm_swap": 0.062493750624937505
+  },
+  "shared_gain": {
+   "g": 0.5315826827537259,
+   "g_ci95": [
+    0.18374557965977406,
+    1.058420170416006
+   ]
+  },
+  "criteria": {
+   "C1_attraction": false,
+   "C2_two_destinations": false
+  },
+  "regime": "offset"
+ }
+}

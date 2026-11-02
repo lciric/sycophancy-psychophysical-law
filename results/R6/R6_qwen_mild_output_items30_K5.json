@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "run": "R6, Qwen2.5-7B-Instruct, dose mild",
+  "reader": "judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation)",
+  "subject_model": "Qwen2.5-7B-Instruct, fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), T = 0.3, top_p 1, top_k 0, at most 400 new tokens; Hugging Face revision a09a3545... logged at download",
+  "dose": "mild",
+  "items": "items 0-29 of the campaign-1 corpus (not released)",
+  "n_items": 30,
+  "K": 5,
+  "seeds": "7 000 000 + 100 000 m + 100 i + k with m = 1, shared by the three conditions of each (i, k) and identical across doses",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "judge_model_returned": "claude-opus-4-6",
+  "generations_sha256 (private raw file, 450 generations)": "a3ba1043dded455ee33a691720a2b1ac2a516fb8a94862b0da400643b4e26a1e",
+  "judgments_sha256 (private raw file, 450 judgments)": "194266777751d1ad1588ffcaf772cd406244a1cb11fb29a2f57937fb7f3c6752",
+  "n_judge_calls": 450,
+  "judge_cost_usd_estimated": 0.593,
+  "responses_over_2000_characters": 1,
+  "private_input_sha256": "9fbdc430febd12ab66f5b955e445308c76b6d7a324ec1d55d163e1907a32287d",
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed."
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 5,
+    "g": 0.3815038464719994,
+    "g_ci95": [
+     0.18391193539860426,
+     0.5932865852560019
+    ],
+    "c": 1.8183868169991333,
+    "c_ci95": [
+     0.35149222835941685,
+     2.3758688267403105
+    ],
+    "R2": 0.2821513373843588,
+    "LOO_R2": 0.18445914026732968,
+    "mean_displacement": -0.45333333333333337,
+    "mean_displacement_ci95": [
+     -0.6333333333333332,
+     -0.26000000000000006
+    ],
+    "no_effect_slope_p": 0.0008999775005624859,
+    "sign": {
+     "concordant": 23,
+     "mobile": 27,
+     "replicates_count_at_least_observed": 2,
+     "p_count": 7.499812504687383e-05,
+     "p_proportion": 0.008524786880327992,
+     "null_median_proportion": 0.625,
+     "null_median_mobile": 22.0,
+     "null_replicates_with_infinite_target": 16
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 5,
+    "g": 0.0399536768963521,
+    "g_ci95": [
+     -0.15689457230368561,
+     0.2566694114560432
+    ],
+    "c": 13.518840579710128,
+    "c_ci95": [
+     -61.431001326261544,
+     65.81533882783947
+    ],
+    "R2": 0.004053271569195105,
+    "LOO_R2": -0.12297870845260128,
+    "mean_displacement": 0.42,
+    "mean_displacement_ci95": [
+     0.25999999999999995,
+     0.5866666666666666
+    ],
+    "no_effect_slope_p": 0.752331191720207,
+    "sign": {
+     "concordant": 22,
+     "mobile": 26,
+     "replicates_count_at_least_observed": 9,
+     "p_count": 0.0002499937501562461,
+     "p_proportion": 0.014274643133921652,
+     "null_median_proportion": 0.6190476190476191,
+     "null_median_mobile": 21.0,
+     "null_replicates_with_infinite_target": 16
+    },
+    "descent_above_target": {
+     "items": 0,
+     "mean_displacement": null,
+     "p": null
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 11.700453762710994,
+   "p_arm_swap": 0.0168983101689831
+  },
+  "shared_gain": {
+   "g": 0.21072876168417567,
+   "g_ci95": [
+    0.047989665237779436,
+    0.3906017856864642
+   ]
+  },
+  "criteria": {
+   "C1_attraction": false,
+   "C2_two_destinations": false
+  },
+  "regime": "offset"
+ }
+}

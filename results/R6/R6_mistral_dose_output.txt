@@ -1,0 +1,8 @@
+R6 dose-response · family mistral · prediction H4 · 30 items
+  mild      critical g=0.308 [0.086, 0.551] c=1.711 [-0.760, 2.434] · praise g=0.591 [0.085, 1.174] c=4.002 [3.277, 7.906] · C1=True C2=True regime=attraction
+  standard  critical g=0.370 [-0.018, 0.963] c=0.681 [-15.932, 10.015] · praise g=0.693 [0.292, 1.223] c=4.256 [3.627, 5.986] · C1=False C2=False regime=offset
+  strong    critical g=0.566 [0.341, 0.895] c=2.221 [1.432, 2.675] · praise g=0.713 [0.182, 1.249] c=3.828 [3.296, 5.620] · C1=True C2=True regime=attraction
+  critical  g(strong)-g(mild)=+0.258 [-0.016, 0.564] · c(strong)-c(mild)=+0.510 [-0.448, 2.810] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard False, strong True · monotone g: True
+  praise    g(strong)-g(mild)=+0.122 [-0.186, 0.381] · c(strong)-c(mild)=-0.174 [-2.828, 0.378] (0 non-finite replicates dropped) · c excludes corpus mean: mild True, standard True, strong True · monotone g: True
+  hypotheses: H1_gain_grows_with_dose=False · H2_fixed_point_stable=True · H2_per_arm={'critical': True, 'praise': True} · H3_destination_not_corpus_mean=True · H4_shift_at_every_dose=False · H5_one_sided_attraction=False
+  outcome: prediction H4_shift_at_every_dose did not hold
