@@ -19,6 +19,14 @@
 - **One display change since the first note, made before any reading.** The instruction now stands above every response, as it stood above every response for the judge. Its wording and its five scale labels are therefore in view at each rating, and the instructions screen says so. Nothing else changed: the order of the texts, the reader and session codes, the absence of a way back and the returned CSV are as in the first note.
 - The page was tested end to end in a headless browser at phone size: 42 ratings in, 43 CSV lines out (header included), progress kept across a reload, no script error.
 
+## What readers receive
+
+- The page, as a file, and the fixed sentence of the first note.
+- Their reader code and their session codes.
+- One practical line, fixed now and written with their codes filled in. In English: *"Open the attached file on a computer, not a phone, enter your reader code and your session code, and send me back the block shown at the end. Your reader code: P01. Your sessions: G00, G01. One session at a time."* In French: *« Ouvre le fichier joint sur un ordinateur, pas sur un téléphone, entre ton code de lecteur et ton code de session, et renvoie-moi le bloc affiché à la fin. Ton code de lecteur : P01. Tes sessions : G00, G01. Une session à la fois. »*
+
+A computer is asked for because phones often open an attached web page in a preview that does not run it.
+
 ## What does not change
 
 The following are those of the first note:
