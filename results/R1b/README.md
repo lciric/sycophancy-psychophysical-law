@@ -49,5 +49,5 @@ The preregistration (§3 R1) makes r the primary reading and asks for the argmax
   - readings: `1470a455a58d7bc6ea52fe1e8c73d5b48320b7c69da98b8f28fd38891d1d68f5`
   - analysis input: `2dd4b3a9f013691a…`
   - analysis output: `32c22b53b9fbf9a8…`
-  - report: `5597b95474a9bca3…`
-  - all in a private repository at commit `b5988e5`.
+  - report: `afd994e0729790db…`, with the argmax section (first version `5597b95474a9bca3…`)
+  - all in a private repository at commit `b5988e5`; the report with the argmax section at `d0d1353`.

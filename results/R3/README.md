@@ -68,4 +68,4 @@ Full outputs: [`R3_qwen_output_items40_K10.txt`](R3_qwen_output_items40_K10.txt)
   - Qwen: generations `756a69a8cfa2b0cd4e3ee7a931ae097b02fa1dd98314c095c76f24df0452c79b`, judgments `b597562901b4d3ffe61d977bc381886f7b42b4915e6a959db48ec6cabb996ed0`, analysis input `f6523b3800bd4f7a…`, output `202d785cdf3542ea…`;
   - Mistral: generations of both machines `d2bbaf198dcf56b6f854860f1bce58c2cb4ace65ab2fbd2692d10ee4bf6867f8`, judgments `4e4fa96b5ecde1a86aa7648b23fe0d9a001ff5756aec0d4930d696fcadadf8db`, analysis input `661a08fff50ff681…`, output `e582bd1170dbd25a…`;
   - Gemma: generations of both machines `332574c228787dce4e006bd0ea6a2065a39988235553a9a1a69f90e07a87601b`, judgments `4f90d6fcc65c1a00ce6351b1edbad6cad6c51b93a237c5a6b401de228f0bd64a`, analysis input `f6cc3e067ee8d812…`, output `2b658d8b3eac2cbb…`;
-  - report `6d1b40e7b9ff4d1e…`; Qwen and Mistral in a private repository at commit `b5988e5`, Gemma at commit `d0d1353`.
+  - report `287c9c3a67e866de…`, final version; Qwen and Mistral in a private repository at commit `b5988e5`, Gemma at commit `d0d1353`, the final report at `c8c8c76`.

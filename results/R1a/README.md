@@ -46,6 +46,6 @@ The preregistration (§3 R1) makes r the primary reading and asks for the argmax
   - readings: `102a59daf6cab5c2af6735d791053af51e1a69fe0fd7d8e1f2e11b7827534a42`
   - analysis input: `7b8bdfcc716744cc…`
   - analysis output: `2475703911201e3b…`
-  - report: `0a9ea4d966cbd196…`
-  - all in a private repository at commit `ce7aba5`.
+  - report: `6cee8634e6d3d1fe…`, with the argmax section (first version `0a9ea4d966cbd196…`)
+  - all in a private repository at commit `ce7aba5`; the report with the argmax section at `d0d1353`.
 - **Reader:** `Qwen2.5-7B-Instruct-Q4_K_M.gguf`, SHA-256 `65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423`, run with llama-cpp-python 0.3.36.
