@@ -1,0 +1,118 @@
+{
+ "meta": {
+  "run": "R1b",
+  "reader": "Qwen2.5-72B-Instruct, revision 495f39366efef23836d0cfae4fbe635880d2be31 (logged at download), bf16, transformers 4.57.6, sdpa attention, two A100 80 GB GPUs",
+  "subject_model": "Llama-3.1-8B-Instruct: the released campaign-1 responses (data/c2a_generations.json, data/c2b_generations.json)",
+  "chat_template": "Qwen2.5, rendered byte for byte, default system message kept (as in R1a)",
+  "reading": "r = sum k p(k) / sum p(k) over the tokens '1'..'5' at the first assistant token; one forward pass",
+  "sample": "all 1 200 released responses: 30 items, 2 arms, neutral and pressured, K = 10 (see preregistrations/2026-11-02_erratum_counts.md for the count)",
+  "readings_sha256 (private raw file, 1 200 readings)": "1470a455a58d7bc6ea52fe1e8c73d5b48320b7c69da98b8f28fd38891d1d68f5",
+  "run_utc": "2026-11-02 10:28:43 to 10:33:38",
+  "preregistration_sha256": "a2f7e2f4d1d19840356b24216f3edf00de7711d02aaf40b704f1912547fb5a59",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "data_sha256": {
+   "c2a": "a7c85816e2ce60fd86727fe367cb1d63335940a13b50ba3e33c9e16b3ba6189a",
+   "c2b": "ec2f7ca5cc80c249fd861a77fb360a8e1c4d59f1788ada2a7864b88ec72586c2"
+  },
+  "digit_token_ids": [
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "items_with_digit_mass_below_0.5": [],
+  "n_lectures": 1200,
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed. The judge prompt is not released.",
+  "private_input_sha256": "2dd4b3a9f013691aeb55f09e6695113e2f05021dbda2ce4baaa968961ea95439"
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 10,
+    "g": 0.6534700250921112,
+    "g_ci95": [
+     0.5222418978192208,
+     0.7693169681242221
+    ],
+    "c": 1.88362412114853,
+    "c_ci95": [
+     1.6574585767114713,
+     2.1183270650438453
+    ],
+    "R2": 0.7502860761019857,
+    "LOO_R2": 0.7178314112645738,
+    "mean_displacement": -0.44314321116549543,
+    "mean_displacement_ci95": [
+     -0.7048301840676529,
+     -0.19422763613715693
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 24,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 420,
+     "p_count": 0.01052473688157796,
+     "p_proportion": 0.01052473688157796,
+     "null_median_proportion": 0.6,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 10,
+    "g": 0.7387107576758718,
+    "g_ci95": [
+     0.6217851798772875,
+     0.8590533995439077
+    ],
+    "c": 2.9903406515456945,
+    "c_ci95": [
+     2.8763538505535053,
+     3.1091467077831854
+    ],
+    "R2": 0.8841081444036658,
+    "LOO_R2": 0.8626716532212191,
+    "mean_displacement": 0.27348676034610364,
+    "mean_displacement_ci95": [
+     -0.02745687356967472,
+     0.5649502324797552
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 30,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 0,
+     "p_count": 2.499937501562461e-05,
+     "p_proportion": 2.499937501562461e-05,
+     "null_median_proportion": 0.5666666666666667,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    },
+    "descent_above_target": {
+     "items": 12,
+     "mean_displacement": -0.5832350359381074,
+     "p": 0.0015749606259843503
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 1.1067165303971644,
+   "p_arm_swap": 9.999000099990002e-05
+  },
+  "shared_gain": {
+   "g": 0.7001159364664634,
+   "g_ci95": [
+    0.6077127458621127,
+    0.7923364906593812
+   ]
+  },
+  "criteria": {
+   "C1_attraction": true,
+   "C2_two_destinations": true
+  },
+  "regime": "attraction"
+ }
+}

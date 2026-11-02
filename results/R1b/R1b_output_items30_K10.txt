@@ -1,0 +1,5 @@
+run: R1b · reader: Qwen2.5-72B-Instruct, revision 495f39366efef23836d0cfae4fbe635880d2be31 (logged at download), bf16, transformers 4.57.6, sdpa attention, two A100 80 GB GPUs · subject: Llama-3.1-8B-Instruct: the released campaign-1 responses (data/c2a_generations.json, data/c2b_generations.json)
+  critical  n=30 K=10  g=0.653 [0.522, 0.769]  c=1.884 [1.657, 2.118]  R2=0.750 LOO=0.718  mean D=-0.443 [-0.705, -0.194]  slope p=2.5e-05  toward c 24/30 p=1.1e-02
+  praise    n=30 K=10  g=0.739 [0.622, 0.859]  c=2.990 [2.876, 3.109]  R2=0.884 LOO=0.863  mean D=+0.273 [-0.027, 0.565]  slope p=2.5e-05  toward c 30/30 p=2.5e-05
+  targets 1.107 apart, arm-swap p=1.0e-04 · shared g=0.700 [0.608, 0.792]
+  criteria: C1_attraction=True · C2_two_destinations=True · regime=attraction

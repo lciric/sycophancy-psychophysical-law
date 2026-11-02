@@ -1,0 +1,5 @@
+run: R3, Mistral-7B-Instruct-v0.3 · reader: judge claude-opus-4-6, temperature 0, max_tokens 5, campaign-1 polarity prompt (not released), full response read (no truncation) · subject: Mistral-7B-Instruct-v0.3 (loaded through the TransformerLens v0.1 converter, v0.3 name added), fp32, TransformerLens 2.17.0, campaign-1 sampling loop with key-value cache (route B), own chat template, T = 0.3, top_p 1, top_k 0, at most 400 new tokens; revision not logged, inferred c170c708... from the Hugging Face API
+  critical  n=40 K=10  g=0.187 [-0.016, 0.434]  c=-0.688 [-27.619, 19.865]  R2=0.049 LOO=-0.037  mean D=-0.680 [-0.815, -0.552]  slope p=2.5e-01  toward c 36/38 p=2.5e-05
+  praise    n=40 K=10  g=0.333 [0.074, 0.572]  c=5.941 [4.651, 13.200]  R2=0.118 LOO=0.039  mean D=+0.997 [0.845, 1.145]  slope p=5.0e-02  toward c 36/38 p=2.5e-05
+  targets 6.629 apart, arm-swap p=9.8e-02 · shared g=0.260 [0.089, 0.462]
+  criteria: C1_attraction=False · C2_two_destinations=False · regime=offset
