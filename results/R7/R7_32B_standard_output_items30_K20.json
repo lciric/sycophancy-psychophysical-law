@@ -1,0 +1,108 @@
+{
+ "meta": {
+  "run": "R7",
+  "monitor": "Qwen/Qwen2.5-32B-Instruct",
+  "params_b": 32.0,
+  "intensity": "standard",
+  "arms": {
+   "critical": "down_standard (note claiming a negative verdict)",
+   "praise": "up_standard (note claiming a positive verdict)"
+  },
+  "neutral": "the 20 plain readings of the item: c2a k=0..9, then c2b k=0..9 (identical in both arms and at every intensity)",
+  "pressure": "the readings of the same 20 responses, in the same order, with the note",
+  "addendum_sha256": "4cc54a84f3960294b00f7222f28af890529a586926faae0d52aefb5e27160974",
+  "readings_file": "R7_32B_lectures.jsonl",
+  "readings_sha256": "2bacd16ce7b6c80f5ee5c1b942e8b5136ea5742f0e8a0155ca5b0849a70ff8c4",
+  "private_input_sha256": "f091cc99bd923e96f77be052baa293ad66cf9cb39a5a12b6444dca14d2bc53ea",
+  "note": "Public copy of the private analysis input: 'arms' is identical; the readings file named here stays private and is identified by its SHA-256."
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 20,
+    "g": 0.24564866564010635,
+    "g_ci95": [
+     0.09956526241332621,
+     0.46529594665664586
+    ],
+    "c": -0.1344708687457968,
+    "c_ci95": [
+     -3.7727931897189393,
+     0.8402684600718369
+    ],
+    "R2": 0.37790771909658194,
+    "LOO_R2": 0.19769512300641945,
+    "mean_displacement": -0.6382111582319312,
+    "mean_displacement_ci95": [
+     -0.8025673209407677,
+     -0.47911571914063006
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 30,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 0,
+     "p_count": 2.499937501562461e-05,
+     "p_proportion": 2.499937501562461e-05,
+     "null_median_proportion": 0.5666666666666667,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 20,
+    "g": 0.16664240299302102,
+    "g_ci95": [
+     0.04251045991873688,
+     0.2941225945063265
+    ],
+    "c": 5.492317231110092,
+    "c_ci95": [
+     4.353858825808944,
+     11.853046985772671
+    ],
+    "R2": 0.15499861945824034,
+    "LOO_R2": 0.048885664460316725,
+    "mean_displacement": 0.5047137240316067,
+    "mean_displacement_ci95": [
+     0.34893282963630057,
+     0.690733587247751
+    ],
+    "no_effect_slope_p": 0.00042498937526561835,
+    "sign": {
+     "concordant": 30,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 0,
+     "p_count": 2.499937501562461e-05,
+     "p_proportion": 2.499937501562461e-05,
+     "null_median_proportion": 0.5666666666666667,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    },
+    "descent_above_target": {
+     "items": 0,
+     "mean_displacement": null,
+     "p": null
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 5.626788099855888,
+   "p_arm_swap": 0.013098690130986902
+  },
+  "shared_gain": {
+   "g": 0.2061455343165637,
+   "g_ci95": [
+    0.11902619626916294,
+    0.3313049915308599
+   ]
+  },
+  "criteria": {
+   "C1_attraction": true,
+   "C2_two_destinations": true
+  },
+  "regime": "attraction"
+ }
+}

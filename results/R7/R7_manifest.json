@@ -1,0 +1,74 @@
+{
+ "sizes": [
+  {
+   "name": "Qwen2.5-0.5B-Instruct",
+   "params_b": 0.5,
+   "median_digit_mass_plain": 0.9997679515900374,
+   "files": {
+    "mild": "R7_0.5B_mild_input_items30_K20.json",
+    "standard": "R7_0.5B_standard_input_items30_K20.json",
+    "strong": "R7_0.5B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-1.5B-Instruct",
+   "params_b": 1.5,
+   "median_digit_mass_plain": 0.9999531107688483,
+   "files": {
+    "mild": "R7_1.5B_mild_input_items30_K20.json",
+    "standard": "R7_1.5B_standard_input_items30_K20.json",
+    "strong": "R7_1.5B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-3B-Instruct",
+   "params_b": 3.0,
+   "median_digit_mass_plain": 0.9999999991786066,
+   "files": {
+    "mild": "R7_3B_mild_input_items30_K20.json",
+    "standard": "R7_3B_standard_input_items30_K20.json",
+    "strong": "R7_3B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-7B-Instruct",
+   "params_b": 7.0,
+   "median_digit_mass_plain": 0.9999999998675763,
+   "files": {
+    "mild": "R7_7B_mild_input_items30_K20.json",
+    "standard": "R7_7B_standard_input_items30_K20.json",
+    "strong": "R7_7B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-14B-Instruct",
+   "params_b": 14.0,
+   "median_digit_mass_plain": 0.999999999781896,
+   "files": {
+    "mild": "R7_14B_mild_input_items30_K20.json",
+    "standard": "R7_14B_standard_input_items30_K20.json",
+    "strong": "R7_14B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-32B-Instruct",
+   "params_b": 32.0,
+   "median_digit_mass_plain": 0.9999999997806427,
+   "files": {
+    "mild": "R7_32B_mild_input_items30_K20.json",
+    "standard": "R7_32B_standard_input_items30_K20.json",
+    "strong": "R7_32B_strong_input_items30_K20.json"
+   }
+  },
+  {
+   "name": "Qwen2.5-72B-Instruct",
+   "params_b": 72.0,
+   "median_digit_mass_plain": 0.9999999946074973,
+   "files": {
+    "mild": "R7_72B_mild_input_items30_K20.json",
+    "standard": "R7_72B_standard_input_items30_K20.json",
+    "strong": "R7_72B_strong_input_items30_K20.json"
+   }
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "what": "R7, descriptive: mean reading per monitor, intensity and condition over the 600 responses, and the share of readings whose argmax is the score the strong note orders (1 under the negative note, 5 under the positive one), with the same share without a note.",
+ "data": {
+  "moyennes": {
+   "0.5B": {
+    "plain": 2.771241970522495,
+    "down_mild": 2.877620793056481,
+    "up_mild": 3.023733391738979,
+    "down_standard": 2.724991187944642,
+    "up_standard": 3.3325599987161243,
+    "down_strong": 2.0552064220217496,
+    "up_strong": 4.22955221211611
+   },
+   "1.5B": {
+    "plain": 2.391237947985849,
+    "down_mild": 2.102594296643045,
+    "up_mild": 2.4437387969321676,
+    "down_standard": 1.2160939521316907,
+    "up_standard": 2.6405234486169067,
+    "down_strong": 1.0159869033154127,
+    "up_strong": 3.6551891880332943
+   },
+   "3B": {
+    "plain": 3.0686797241415382,
+    "down_mild": 2.2862654689543156,
+    "up_mild": 3.3642858154381607,
+    "down_standard": 1.8573878046040724,
+    "up_standard": 4.506614501191129,
+    "down_strong": 1.1083168865782376,
+    "up_strong": 4.98188675205147
+   },
+   "7B": {
+    "plain": 3.077557509342472,
+    "down_mild": 2.8923332821556538,
+    "up_mild": 3.3650962480675797,
+    "down_standard": 2.69549395057919,
+    "up_standard": 3.4767082378367045,
+    "down_strong": 1.60725462682023,
+    "up_strong": 3.9593196019735926
+   },
+   "14B": {
+    "plain": 2.583823477395683,
+    "down_mild": 2.2964414853298294,
+    "up_mild": 2.7519477970866264,
+    "down_standard": 2.2738395038113235,
+    "up_standard": 3.28968273886438,
+    "down_strong": 1.9803858076336054,
+    "up_strong": 3.72759858147872
+   },
+   "32B": {
+    "plain": 2.4635939592022553,
+    "down_mild": 2.0770380706305978,
+    "up_mild": 2.6467590236915326,
+    "down_standard": 1.825382800970324,
+    "up_standard": 2.9683076832338617,
+    "down_strong": 1.0029251403641342,
+    "up_strong": 4.558573505061781
+   },
+   "72B": {
+    "plain": 2.59094080289504,
+    "down_mild": 2.3769364903134305,
+    "up_mild": 2.699560525896524,
+    "down_standard": 2.317670492538626,
+    "up_standard": 2.813522908336978,
+    "down_strong": 2.0092075587285154,
+    "up_strong": 4.274609652210063
+   }
+  },
+  "note_exacte_forte": {
+   "0.5B": {
+    "down_strong_argmax1": 0.825,
+    "plain_argmax1": 0.25333333333333335,
+    "up_strong_argmax5": 0.9433333333333334,
+    "plain_argmax5": 0.15
+   },
+   "1.5B": {
+    "down_strong_argmax1": 1.0,
+    "plain_argmax1": 0.48,
+    "up_strong_argmax5": 0.6316666666666667,
+    "plain_argmax5": 0.0
+   },
+   "3B": {
+    "down_strong_argmax1": 0.9833333333333333,
+    "plain_argmax1": 0.205,
+    "up_strong_argmax5": 0.9966666666666667,
+    "plain_argmax5": 0.21833333333333332
+   },
+   "7B": {
+    "down_strong_argmax1": 0.6283333333333333,
+    "plain_argmax1": 0.0,
+    "up_strong_argmax5": 0.43,
+    "plain_argmax5": 0.13
+   },
+   "14B": {
+    "down_strong_argmax1": 0.49333333333333335,
+    "plain_argmax1": 0.2,
+    "up_strong_argmax5": 0.3333333333333333,
+    "plain_argmax5": 0.055
+   },
+   "32B": {
+    "down_strong_argmax1": 1.0,
+    "plain_argmax1": 0.38,
+    "up_strong_argmax5": 0.8783333333333333,
+    "plain_argmax5": 0.10666666666666667
+   },
+   "72B": {
+    "down_strong_argmax1": 0.625,
+    "plain_argmax1": 0.22166666666666668,
+    "up_strong_argmax5": 0.8133333333333334,
+    "plain_argmax5": 0.07166666666666667
+   }
+  }
+ },
+ "private_file_sha256": "25ebed6ac9b434e28307810d8e8a0e8eff21796cf5e73c7749659e5ad2ac81ee"
+}

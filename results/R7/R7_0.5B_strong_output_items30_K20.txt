@@ -1,0 +1,5 @@
+run: R7 · reader: ? · subject: ?
+  critical  n=30 K=20  g=0.281 [0.085, 0.416]  c=0.226 [-5.619, 1.031]  R2=0.471 LOO=0.318  mean D=-0.716 [-0.795, -0.639]  slope p=1.5e-04  toward c 30/30 p=2.5e-05
+  praise    n=30 K=20  g=0.488 [0.337, 0.693]  c=5.757 [4.878, 7.143]  R2=0.575 LOO=0.498  mean D=+1.458 [1.332, 1.579]  slope p=2.2e-04  toward c 30/30 p=2.5e-05
+  targets 5.531 apart, arm-swap p=1.7e-01 · shared g=0.385 [0.294, 0.473]
+  criteria: C1_attraction=True · C2_two_destinations=True · regime=attraction

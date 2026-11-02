@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 21:23 Paris (20:23 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 21:54 Paris (20:54 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -13,6 +13,7 @@
 | **R1b**: open-weights judge (Qwen2.5-72B) on all 1 200 released responses | the judge | C1 and C2 hold at full scale (outcome A), with a C2 margin of 0.76. Gains 0.65 and 0.74. The argmax reading agrees. See [`results/R1b/`](results/R1b/README.md). |
 | **R3**: Qwen2.5-7B, Mistral-7B-v0.3 and Gemma-2-9B, 40 items × 3 conditions × K = 10 | one model | All three fail C1 and C2 (regime offset). Qwen and Mistral shift every item by about the same amount; for Qwen this is the preregistered outcome A. Gemma shows a strong attraction under criticism only (g = 0.93). See [`results/R3/`](results/R3/README.md). |
 | **R6**: three intensities of the pressure sentence, four families, 30 items, K = 5 (addendum archived before any token) | the wording of the pressure | Llama: **outcome C**, not the predicted A. The law is found again at the campaign-1 wording, but the gain does not grow with intensity under criticism, and the destination moves with the wording; at the strongest wording the rating is set back toward the middle. Qwen (offset) and Gemma (criticism only) hold their predictions; Mistral does not (attraction at the mild and strong doses). See [`results/R6/`](results/R6/README.md). |
+| **R7**: seven Qwen2.5 monitors (0.5B–72B) read the 600 released responses with a planted note claiming the verdict, three intensities (addendum archived before any reading) | the judge as an attack surface | **Outcome C**, not the predicted A. The 72B is not captured in either direction (it shifts uniformly instead); most mid sizes are captured one way only; under the negative note the capture gain falls with size (−0.19 per decade [−0.24, −0.11]); an order naming the score captures 1.5B, 3B and 32B almost entirely. See [`results/R7/`](results/R7/README.md). |
 | **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. Without the items with refusals, all four criteria still hold. See [`results/R4/`](results/R4/README.md). |
 
 ## Running (times are Paris, 2 November)
@@ -21,7 +22,7 @@
 
 Each addendum fixes in advance what each of its outcomes means.
 
-**R7, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R7_monitor_deference.md`](preregistrations/2026-11-02_addendum_R7_monitor_deference.md)): the deference law of a *monitor*. Seven Qwen2.5 judges, 0.5B to 72B, read the 600 released unpressured responses with and without an in-band note claiming the verdict (three intensities, both directions); the gain g is fitted per size and its trend in log size estimated, by the frozen [`code/analyse_monitor.py`](code/analyse_monitor.py). Archived before any R7 reading in release v2026.11.4, [10.5281/zenodo.23892810](https://doi.org/10.5281/zenodo.23892810), 2 November 2026, 18:30 UTC. Run from 19:37 to 21:02 on seven machines (GPU about 3 $), independently rechecked, being deposited: **outcome C**, provisional until published. The 72B monitor does not defer to a planted claim at the mild or standard intensity in either direction; under the negative note the deference gain falls with monitor size; the strongest intensity, an order naming the score, is obeyed almost to the letter by 1.5B, 3B and 32B. Published in `results/R7/` once the arbitration window has read the deposit.
+**R7, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R7_monitor_deference.md`](preregistrations/2026-11-02_addendum_R7_monitor_deference.md)): the deference law of a *monitor*. Seven Qwen2.5 judges, 0.5B to 72B, read the 600 released unpressured responses with and without an in-band note claiming the verdict (three intensities, both directions); the gain g is fitted per size and its trend in log size estimated, by the frozen [`code/analyse_monitor.py`](code/analyse_monitor.py). Archived before any R7 reading in release v2026.11.4, [10.5281/zenodo.23892810](https://doi.org/10.5281/zenodo.23892810), 2 November 2026, 18:30 UTC. Run from 19:37 to 21:02 on seven machines (GPU about 3 $), independently rechecked, published: **outcome C**, under Done above.
 
 **R8, preregistered on 2 November in the evening** ([`preregistrations/2026-11-02_addendum_R8_post_training_stages.md`](preregistrations/2026-11-02_addendum_R8_post_training_stages.md)): the law across the public post-training stages of the same base model, Llama-3.1-8B → Tülu 3 SFT → DPO → RLVR, beside Llama-3.1-8B-Instruct; frozen analysis [`code/analyse_stages.py`](code/analyse_stages.py). **R9, preregistered the same evening** ([`preregistrations/2026-11-02_addendum_R9_feature_specific_error_correction.md`](preregistrations/2026-11-02_addendum_R9_feature_specific_error_correction.md)): whether the pressure direction of Llama-3.1-8B-Instruct behaves like a feature under the error-correction instrument of Ferreira da Silva & Heimersheim (2026); frozen analysis [`code/analyse_fsec.py`](code/analyse_fsec.py). Both start only after this addendum is archived on Zenodo and a budget is signed.
 
@@ -46,9 +47,8 @@ R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 ## Next, today
 
-1. Publish `results/R7/` from the deposit.
-2. Archive the R8 and R9 addenda (release v2026.11.5), sign their budgets, run them; then independent recomputations, then `results/R8/` and `results/R9/`.
-3. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+1. Archive the R8 and R9 addenda (release v2026.11.5), sign their budgets, run them; then independent recomputations, then `results/R8/` and `results/R9/`.
+2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 
