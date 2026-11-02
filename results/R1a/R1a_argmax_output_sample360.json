@@ -1,0 +1,113 @@
+{
+ "meta": {
+  "run": "R1a, argmax reading",
+  "role": "secondary reading, preregistered as reported (section 3 R1: 'Primary analysis on r; argmax reported.')",
+  "reader": "Qwen2.5-7B-Instruct, GGUF Q4_K_M (bartowski), llama.cpp on CPU",
+  "subject_model": "Llama-3.1-8B-Instruct: the released campaign-1 responses (data/c2a_generations.json, data/c2b_generations.json)",
+  "chat_template": "Qwen2.5, rendered byte for byte, default system message kept",
+  "reading": "argmax over the tokens '1'..'5' at the first assistant token (field argmax_chiffre of each reading); same forward pass as the primary reading r",
+  "sample": "timing trial 5.70 s per reading > 5.0 s, so every item, condition and arm at k in {0, 1, 2}: 360 readings (see preregistrations/2026-11-02_erratum_counts.md)",
+  "readings_sha256 (private raw file)": "102a59daf6cab5c2af6735d791053af51e1a69fe0fd7d8e1f2e11b7827534a42",
+  "primary_input": "results/R1a/R1a_input_sample360.json (r, same readings, same order of k)",
+  "arms_sha256 (json.dumps(arms, sort_keys=True))": "7d728bed7d1223e2c6a5ae444a961a564adc311109058e42667649d551af17c2",
+  "note": "Built from the raw readings, then rebuilt independently from the same raw file by a fresh instance: identical arms and identical analysis.",
+  "preregistration_sha256": "a2f7e2f4d1d19840356b24216f3edf00de7711d02aaf40b704f1912547fb5a59",
+  "gguf_sha256": "65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "data_sha256": {
+   "c2a": "a7c85816e2ce60fd86727fe367cb1d63335940a13b50ba3e33c9e16b3ba6189a",
+   "c2b": "ec2f7ca5cc80c249fd861a77fb360a8e1c4d59f1788ada2a7864b88ec72586c2"
+  },
+  "llama_cpp_python": "0.3.36",
+  "n_lectures": 360
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 3,
+    "g": 0.7714831317632082,
+    "g_ci95": [
+     0.5938644961434042,
+     0.9803408406619416
+    ],
+    "c": 2.3568481848184812,
+    "c_ci95": [
+     2.111395314838845,
+     2.587562321251083
+    ],
+    "R2": 0.7136329369944729,
+    "LOO_R2": 0.6652538850336958,
+    "mean_displacement": -0.6333333333333332,
+    "mean_displacement_ci95": [
+     -0.9333333333333332,
+     -0.3555555555555555
+    ],
+    "no_effect_slope_p": 0.008549786255343616,
+    "sign": {
+     "concordant": 18,
+     "mobile": 20,
+     "replicates_count_at_least_observed": 6268,
+     "p_count": 0.15672108197295068,
+     "p_proportion": 0.07054823629409265,
+     "null_median_proportion": 0.7777777777777778,
+     "null_median_mobile": 20.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 3,
+    "g": 0.7481967213114753,
+    "g_ci95": [
+     0.5479497235344545,
+     0.9260877924088021
+    ],
+    "c": 3.3520303827052302,
+    "c_ci95": [
+     3.1206925656538194,
+     3.6061010839134475
+    ],
+    "R2": 0.6968918032786884,
+    "LOO_R2": 0.6500039051037323,
+    "mean_displacement": 0.05555555555555558,
+    "mean_displacement_ci95": [
+     -0.2666666666666666,
+     0.3666666666666666
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 22,
+     "mobile": 24,
+     "replicates_count_at_least_observed": 258,
+     "p_count": 0.006474838129046774,
+     "p_proportion": 0.001399965000874978,
+     "null_median_proportion": 0.6538461538461539,
+     "null_median_mobile": 24.0,
+     "null_replicates_with_infinite_target": 1
+    },
+    "descent_above_target": {
+     "items": 13,
+     "mean_displacement": -0.6153846153846154,
+     "p": 0.005724856878578035
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 0.995182197886749,
+   "p_arm_swap": 9.999000099990002e-05
+  },
+  "shared_gain": {
+   "g": 0.7587173772377597,
+   "g_ci95": [
+    0.6437860536728018,
+    0.871890278526919
+   ]
+  },
+  "criteria": {
+   "C1_attraction": true,
+   "C2_two_destinations": true
+  },
+  "regime": "attraction"
+ }
+}

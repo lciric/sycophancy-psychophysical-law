@@ -24,6 +24,17 @@ Preregistered criteria: **C1 (attraction) and C2 (two destinations) hold**, so o
 - The targets sit higher on Qwen's scale (2.35 and 3.34, against 1.46 and 2.94). Amplitude agreement across readers was not a criterion (§0).
 - The "single judge family" limit recedes accordingly, for this reader, this quantisation and this sample. R1b, a 72B reader on all 1 200 responses, is running.
 
+## Argmax reading (secondary)
+
+The preregistration (§3 R1) makes r the primary reading and asks for the argmax to be reported. Here are the same 360 readings, with the most likely digit in place of r ([`R1a_argmax_input_sample360.json`](R1a_argmax_input_sample360.json)):
+
+| arm | g [95 % CI] | ĉ [95 % CI] | R² / leave-one-out | mean Δ [95 % CI] |
+|---|---|---|---|---|
+| critical | 0.771 [0.594, 0.980] | 2.357 [2.111, 2.588] | 0.714 / 0.665 | −0.633 [−0.933, −0.356] |
+| praise | 0.748 [0.548, 0.926] | 3.352 [3.121, 3.606] | 0.697 / 0.650 | +0.056 [−0.267, +0.367] |
+
+**C1 and C2 hold on the argmax as on r**; the C2 margin is 3.121 − 2.588 = 0.533. The two readings agree closely: in 254 of the 360 readings the most likely digit carries more than 90 % of the mass, and r differs from the argmax by 0.10 on average. The input was built from the raw readings, then rebuilt independently from the same raw file by a fresh instance, which obtained identical arms and an identical analysis. `check_results.py` reruns it. Full output: [`R1a_argmax_output_sample360.txt`](R1a_argmax_output_sample360.txt).
+
 ## Verification
 
 - **Reproduce the analysis:** `python3 -I code/check_results.py` reruns the frozen analysis on [`R1a_input_sample360.json`](R1a_input_sample360.json) and compares the result with the published output. CI runs it on every push.
