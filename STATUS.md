@@ -22,6 +22,8 @@ Nothing is running. Every run that the 13:00 window allowed is done. R5 and the 
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
+**R7, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R7_monitor_deference.md`](preregistrations/2026-11-02_addendum_R7_monitor_deference.md)): the deference law of a *monitor*. Seven Qwen2.5 judges, 0.5B to 72B, read the 600 released unpressured responses with and without an in-band note claiming the verdict (three intensities, both directions); the gain g is fitted per size and its trend in log size estimated, by the frozen [`code/analyse_monitor.py`](code/analyse_monitor.py). It starts only after the addendum is archived on Zenodo and a budget is signed.
+
 ## Declared deviations and precisions, all fixed before the data they touch
 
 - **Quantisation in R1a and R2.** Q4_K_M on CPU, declared in the preregistration. R2 uses one BOS, the literal Llama-3.1 template; campaign 1 had two. R1a keeps Qwen's default system message, the literal "Qwen chat template".
@@ -41,7 +43,8 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 ## Next, today
 
 1. Run R6 (archived, budget signed); then an independent recomputation, then `results/R6/`.
-2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+2. Archive the R7 addendum, sign its budget, run R7; then an independent recomputation, then `results/R7/`.
+3. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 

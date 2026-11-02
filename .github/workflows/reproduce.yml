@@ -23,6 +23,8 @@ jobs:
         run: python3 -I code/analyse_runs.py --selftest
       - name: Self-test of the frozen dose-response analysis (R6)
         run: python3 -I code/analyse_dose.py --selftest
+      - name: Self-test of the frozen monitor-deference analysis (R7)
+        run: python3 -I code/analyse_monitor.py --selftest
       - name: Recompute every published follow-up result from its input
         run: python3 -I code/check_results.py
       - name: Regenerate the figures from the published files and compare byte for byte
