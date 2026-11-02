@@ -18,6 +18,8 @@
 
 Nothing is running. Every run that the 13:00 window allowed is done. R5 and the R3 secondary reading remain registered unchanged (see Later).
 
+**R6, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R6_dose_response.md`](preregistrations/2026-11-02_addendum_R6_dose_response.md)): three intensities of the pressure sentence on the four families, 30 items, K = 5, analysed by the frozen [`code/analyse_dose.py`](code/analyse_dose.py). It starts only after the addendum is archived on Zenodo and a budget is signed.
+
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
 ## Declared deviations and precisions, all fixed before the data they touch
@@ -46,4 +48,3 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 - **R2 at full precision** (transformers, bf16/fp32). This removes the quantisation deviation and the sensitivity to the llama.cpp implementation. Add more readings per item on the praise arm.
 - **R3 secondary reading:** the R1a reader (Qwen2.5-7B, CPU) on the R3 responses, as preregistered. It did not fit before 13:00 Paris and remains registered unchanged.
 - **Manuscript:** cite the numbers of `code/reproduce.py`, and state that the third rival is excluded by magnitude, not by the count of descents.
-- **A graded-intensity (dose–response) extension** of the pressure manipulation, pending design decisions.

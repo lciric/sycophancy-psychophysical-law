@@ -21,5 +21,7 @@ jobs:
         run: python3 -I code/reproduce.py --check
       - name: Self-test of the frozen analysis for the follow-up runs
         run: python3 -I code/analyse_runs.py --selftest
+      - name: Self-test of the frozen dose-response analysis (R6)
+        run: python3 -I code/analyse_dose.py --selftest
       - name: Recompute every published follow-up result from its input
         run: python3 -I code/check_results.py
