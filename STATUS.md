@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 10:44 Paris (09:44 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 11:28 Paris (10:28 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -10,14 +10,14 @@
 |---|---|---|
 | **R2**: the model's own rating, no judge | the judge | C1 and C2 hold on the run (outcome A). Criticism: g = 0.63, R² = 0.91. Praise: g = 0.14 [0.03, 0.24]. C2 does not survive a change of llama.cpp implementation (independently re-checked). See [`results/R2/`](results/R2/README.md). |
 | **R1a**: open-weights judge (Qwen2.5-7B) on the released responses, 360 readings | the judge | C1 and C2 hold (outcome A), with a C2 margin of 0.53. Gains 0.74 and 0.73, against 0.72 and 0.68 with the original judge. See [`results/R1a/`](results/R1a/README.md). |
+| **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. A refusal sensitivity is pending. See [`results/R4/`](results/R4/README.md). |
 
 ## Running (times are Paris, 2 November)
 
 | run | what | state | expected |
 |---|---|---|---|
-| R4 | 60 new items × 3 conditions × K = 5, Llama-3.1-8B, campaign-1 law with no refit (criteria C3, C4) | 675 / 900 generations at 10:32 | judged and recomputed around 11:45 |
-| R3 | Qwen2.5-7B, Mistral-7B-v0.3, Gemma-2-9B; 40 items × 3 conditions × K = 10 | at 10:32: Qwen 800, Mistral 650, Gemma 500 (of 1 200 each) | Qwen and Mistral around 12:00; Gemma (two machines) around 12:30 |
-| R1b | Qwen2.5-72B (bf16) as judge on all 1 200 released responses | starting around 11:15 | after 12:15 |
+| R3 | Qwen2.5-7B, Mistral-7B-v0.3, Gemma-2-9B; 40 items × 3 conditions × K = 10 | Qwen and Mistral generated and being judged; Gemma about 800 / 1 200 on two machines, with its resolution check running | Qwen and Mistral around 12:15; Gemma around 12:45 |
+| R1b | Qwen2.5-72B (bf16) as judge on all 1 200 released responses | started 11:14, downloading the model | after 12:30 |
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
