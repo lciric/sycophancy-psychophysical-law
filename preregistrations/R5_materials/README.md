@@ -31,4 +31,4 @@ Outcome A: C1, C2 and C5 hold — human readers see the attraction and the judge
 
 ## Pilot with acquaintance readers
 
-A pilot that borrows these materials with readers the author knows is declared, before any reading, in [`2026-11-02_note_R5_pilot_acquaintances.md`](2026-11-02_note_R5_pilot_acquaintances.md). It is reported as **R5-pilot**, never as R5.
+A pilot that borrows these materials with readers the author knows is declared, before any reading, in [`2026-11-02_note_R5_pilot_acquaintances.md`](2026-11-02_note_R5_pilot_acquaintances.md). It is reported as **R5-pilot**, never as R5. Its instruction and the SHA-256 of its readers' page are fixed, also before the first reading, in [`2026-11-02_note_R5_pilot_page.md`](2026-11-02_note_R5_pilot_page.md).

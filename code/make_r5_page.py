@@ -6,8 +6,9 @@
 
 INSTR.json: {"instruction": "...", "question": "...", "label_low": "...", "label_high": "..."}, the judge prompt's scale and
 wording as section 3 R5 requires. The page works offline, shows one response at a time in the order of
-preregistrations/R5_materials/R5_groups.csv, keeps progress in the browser, and ends with the ratings as CSV lines
-(participant_id, id, rating, session, position) to copy or download and send back. It sends nothing anywhere.
+preregistrations/R5_materials/R5_groups.csv, each below the instruction as the judge read it, keeps progress in the
+browser, and ends with the ratings as CSV lines (participant_id, id, rating, session, position) to copy or download
+and send back. It sends nothing anywhere.
 """
 import csv
 import hashlib
@@ -44,7 +45,8 @@ button { font: 600 16px system-ui, sans-serif; padding: 11px 18px; border-radius
 button.secondary { background: transparent; color: var(--accent); }
 button:disabled { opacity: .4; cursor: default; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin: 14px 0 18px; white-space: pre-wrap; overflow-wrap: anywhere; }
-.instr { white-space: pre-wrap; }
+.instr { white-space: pre-wrap; margin: 0 0 14px; }
+.reminder { font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--muted); border-left: 3px solid var(--line); padding: 2px 0 2px 12px; margin: 14px 0 0; }
 .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin: 8px 0 4px; }
 .bar > div { height: 100%; background: var(--accent); width: 0; }
 .scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 10px 0 4px; }
@@ -89,7 +91,9 @@ function start() {
 }
 
 function instructions() {
-  app.innerHTML = `<h1>Instructions</h1><div class="instr">${esc(INSTR.instruction)}</div>
+  app.innerHTML = `<h1>Instructions</h1>
+  <p class="muted">This instruction is shown again on every screen, with one text below it.</p>
+  <div class="instr">${esc(INSTR.instruction)}</div>
   <p class="muted">Read each text in full, then choose one number. There are no right or wrong answers, only your reading. You cannot go back to a previous text. Most texts end with a technical marker, &lt;|eot_id|&gt;: ignore it.</p>
   <button id="b">Begin</button>`;
   document.getElementById("b").onclick = () => { st.seenInstr = true; save(); task(); };
@@ -100,6 +104,7 @@ function task() {
   let choice = null;
   app.innerHTML = `<div class="muted">Text ${st.pos + 1} of ${n} · session ${esc(st.session)}</div>
   <div class="bar"><div style="width:${(100 * st.pos / n).toFixed(1)}%"></div></div>
+  <div class="instr reminder">${esc(INSTR.instruction)}</div>
   <div class="card" style="font-family: Georgia, 'Times New Roman', serif;">${esc(DATA.texts[id])}</div>
   <p><strong>${esc(INSTR.question)}</strong></p>
   <div class="scale">${[1, 2, 3, 4, 5].map(v => `<button data-v="${v}" aria-label="${v}">${v}</button>`).join("")}</div>
