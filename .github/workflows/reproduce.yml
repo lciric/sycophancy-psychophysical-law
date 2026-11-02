@@ -25,6 +25,10 @@ jobs:
         run: python3 -I code/analyse_dose.py --selftest
       - name: Self-test of the frozen monitor-deference analysis (R7)
         run: python3 -I code/analyse_monitor.py --selftest
+      - name: Rebuild the R5 stimulus files from the released data and compare byte for byte
+        run: python3 -I code/make_r5_stimuli.py --check
+      - name: Self-test of the frozen human-reader analysis (R5)
+        run: python3 -I code/analyse_humans.py --selftest
       - name: Recompute every published follow-up result from its input
         run: python3 -I code/check_results.py
       - name: Regenerate the figures from the published files and compare byte for byte
