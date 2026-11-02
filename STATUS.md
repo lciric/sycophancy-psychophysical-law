@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 11:55 Paris (10:55 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 12:13 Paris (11:13 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -11,14 +11,12 @@
 | **R2**: the model's own rating, no judge | the judge | C1 and C2 hold on the run (outcome A). Criticism: g = 0.63, R² = 0.91. Praise: g = 0.14 [0.03, 0.24]. C2 does not survive a change of llama.cpp implementation (independently re-checked). See [`results/R2/`](results/R2/README.md). |
 | **R1a**: open-weights judge (Qwen2.5-7B) on the released responses, 360 readings | the judge | C1 and C2 hold (outcome A), with a C2 margin of 0.53. Gains 0.74 and 0.73, against 0.72 and 0.68 with the original judge. See [`results/R1a/`](results/R1a/README.md). |
 | **R1b**: open-weights judge (Qwen2.5-72B) on all 1 200 released responses | the judge | C1 and C2 hold at full scale (outcome A), with a C2 margin of 0.76. Gains 0.65 and 0.74. The argmax reading agrees. See [`results/R1b/`](results/R1b/README.md). |
-| **R3**, Qwen2.5-7B and Mistral-7B-v0.3, 40 items × 3 conditions × K = 10 | one model | Both fail C1 and C2: a uniform shift (regime offset), not an attraction. For Qwen this is the preregistered outcome A. Under praise, Mistral moves up by one point and Qwen moves down. See [`results/R3/`](results/R3/README.md). |
+| **R3**: Qwen2.5-7B, Mistral-7B-v0.3 and Gemma-2-9B, 40 items × 3 conditions × K = 10 | one model | All three fail C1 and C2 (regime offset). Qwen and Mistral shift every item by about the same amount; for Qwen this is the preregistered outcome A. Gemma shows a strong attraction under criticism only (g = 0.93). See [`results/R3/`](results/R3/README.md). |
 | **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. Without the items with refusals, all four criteria still hold. See [`results/R4/`](results/R4/README.md). |
 
 ## Running (times are Paris, 2 November)
 
-| run | what | state | expected |
-|---|---|---|---|
-| R3, Gemma-2-9B | 40 items × 3 conditions × K = 10 | passed its resolution check (primary family, see below); generation ending, then the judge | around 12:45 |
+Nothing is running. Every run that the 13:00 window allowed is done. R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
@@ -40,9 +38,7 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 
 ## Next, today
 
-1. Judge R4 and R3 as their generations finish. Analyse with the frozen code. Run an independent recomputation, then publish here.
-2. Gemma resolution check: done, primary family. Judge Gemma once its generation ends.
-3. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+1. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 
