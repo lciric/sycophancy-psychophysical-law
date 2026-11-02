@@ -282,7 +282,11 @@ def grid_figure(fig, title, columns, note_fn, aria):
             p = Panel(gx + col * colw, top + row * (size + gy), size)
             neu, pre = campaign1(arm) if arms is None else arms[arm]
             p0, p1 = neu.mean(1), pre.mean(1)
-            out.append(p.frame("p₀", "p₁", f"{name}" if row == 0 else f"{arm}", f"{arm} · {sub}" if row == 0 else ""))
+            subtitle = f"{arm} · {sub}" if row == 0 else ""
+            if row == 0 and fig == "F2" and rel_out is not None:
+                regime = quote(fig, f"{name}", "regime (both arms)", rel_out, "analysis/regime")
+                subtitle += f" · regime, both arms: {regime}"
+            out.append(p.frame("p₀", "p₁", f"{name}" if row == 0 else f"{arm}", subtitle))
             out.append(boot_band(p, p0, p1, color, 10 + 2 * col + row))
             out.append(split_half(p, neu))
             g, c, lines = note_fn(fig, name, arm, rel_out)
@@ -310,14 +314,11 @@ def note_numbers(fig, name, arm, rel_out):
         lines.append((f"ĉ = {f2(c)} {ci(clo, chi)}", COLOR[arm]))
     else:
         lines.append(("ĉ off the scale", DARK))
-    if rel_out is not None and fig == "F2":
-        regime = quote(fig, f"{name} {arm}", "regime", rel_out, "analysis/regime")
-        lines.append((f"regime: {regime}", INK))
     return g, c, lines
 
 
 def fig2_families():
-    return grid_figure("F2", "Four model families, same items (0–39 of the corpus), same judge, same axes", FAMILIES, note_numbers,
+    return grid_figure("F2", "Four model families, one judge, the same axes (Llama: campaign 1, items 0–29, K = 10; the others: R3, items 0–39, K = 10)", FAMILIES, note_numbers,
                        "Four model families compared: Llama shows attraction; Qwen and Mistral a uniform shift; Gemma attraction under criticism only")
 
 

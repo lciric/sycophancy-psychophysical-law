@@ -39,7 +39,7 @@ Every figure is drawn by [`code/make_figures.py`](code/make_figures.py) from the
 
 ![Four model families compared](figures/F2_families.svg)
 
-*Figure 2 — Four model families on the same axes, same items, same judge. Llama's line is flat through a fixed point. Qwen's and Mistral's run parallel to the diagonal: every item moves by about the same amount, a uniform shift. Gemma collapses to the floor under criticism and barely moves under praise.*
+*Figure 2 — Four model families on the same axes, scored by the same judge (Llama: campaign 1, 30 items; the others: R3, 40 items). Llama's line is flat through a fixed point. Qwen's and Mistral's run parallel to the diagonal: every item moves by about the same amount, a uniform shift. Gemma collapses to the floor under criticism and barely moves under praise.*
 
 ![Four readers of the same responses](figures/F3_readers.svg)
 

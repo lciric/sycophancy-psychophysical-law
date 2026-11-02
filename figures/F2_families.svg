@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="610" viewBox="0 0 1040 610" role="img" aria-label="Four model families compared: Llama shows attraction; Qwen and Mistral a uniform shift; Gemma attraction under criticism only">
 <title>Four model families compared: Llama shows attraction; Qwen and Mistral a uniform shift; Gemma attraction under criticism only</title>
 <rect width="1040" height="610" fill="#ffffff"/>
-<text x="520.0" y="22" font-size="14" font-weight="bold" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">Four model families, same items (0–39 of the corpus), same judge, same axes</text>
+<text x="520.0" y="22" font-size="14" font-weight="bold" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">Four model families, one judge, the same axes (Llama: campaign 1, items 0–29, K = 10; the others: R3, items 0–39, K = 10)</text>
 <rect x="62" y="58" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="72.56" y1="248" x2="72.56" y2="252" stroke="#444444" stroke-width="0.8"/>
 <text x="72.56" y="263" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -149,7 +149,7 @@
 <text x="399.0" y="277" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₀</text>
 <text transform="translate(277,153.0) rotate(-90)" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₁</text>
 <text x="304" y="40" font-size="12" font-weight="bold" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">Qwen2.5-7B-Instruct</text>
-<text x="304" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3</text>
+<text x="304" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3 · regime, both arms: offset</text>
 <line x1="304.0" y1="248.0" x2="494.0" y2="58.0" stroke="#9a9a9a" stroke-width="0.9" stroke-dasharray="4,3"/>
 <polygon points="304.0,246.49 308.75,243.14 313.5,239.76 318.25,236.38 323.0,233.03 327.75,229.62 332.5,226.21 337.25,222.78 342.0,219.35 346.75,215.96 351.5,212.58 356.25,209.06 361.0,205.57 365.75,202.08 370.5,198.55 375.25,195.02 380.0,191.47 384.75,187.84 389.5,184.07 394.25,180.29 399.0,176.26 403.75,172.09 408.5,167.72 413.25,163.17 418.0,158.46 422.75,153.69 427.5,148.8 432.25,143.91 437.0,139.0 441.75,134.02 446.5,129.04 451.25,124.05 456.0,119.08 460.75,114.08 465.5,109.06 470.25,104.05 475.0,99.0 479.75,93.92 484.5,88.86 489.25,83.86 494.0,78.83 494.0,113.62 489.25,117.1 484.5,120.53 479.75,123.94 475.0,127.36 470.25,130.84 465.5,134.3 460.75,137.75 456.0,141.27 451.25,144.74 446.5,148.27 441.75,151.81 437.0,155.42 432.25,159.05 427.5,162.8 422.75,166.58 418.0,170.44 413.25,174.33 408.5,178.44 403.75,182.55 399.0,186.77 394.25,191.11 389.5,195.53 384.75,200.08 380.0,204.7 375.25,209.41 370.5,214.18 365.75,219.01 361.0,223.84 356.25,228.7 351.5,233.63 346.75,238.58 342.0,243.52 337.25,248.0 332.5,248.0 327.75,248.0 323.0,248.0 318.25,248.0 313.5,248.0 308.75,248.0 304.0,248.0" fill="#D55E00" fill-opacity="0.13" stroke="none"/>
 <line x1="304.0" y1="239.87" x2="494.0" y2="65.73" stroke="#444444" stroke-width="1.2" stroke-dasharray="1.5,3"/>
@@ -197,7 +197,6 @@
 
 <text x="310" y="71.0" font-size="10" fill="#D55E00" text-anchor="start" font-family="Helvetica, Arial, sans-serif">g = 0.12 [-0.07, 0.29]</text>
 <text x="310" y="83.5" font-size="10" fill="#444444" text-anchor="start" font-family="Helvetica, Arial, sans-serif">ĉ off the scale</text>
-<text x="310" y="96.0" font-size="10" fill="#1a1a1a" text-anchor="start" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
 <rect x="304" y="318" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="314.56" y1="508" x2="314.56" y2="512" stroke="#444444" stroke-width="0.8"/>
 <text x="314.56" y="523" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -269,7 +268,6 @@
 <polygon points="356.72,449.78 362.22,455.28 356.72,460.78 351.22,455.28" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
 <text x="310" y="331.0" font-size="10" fill="#0072B2" text-anchor="start" font-family="Helvetica, Arial, sans-serif">g = 0.27 [0.08, 0.50]</text>
 <text x="310" y="343.5" font-size="10" fill="#0072B2" text-anchor="start" font-family="Helvetica, Arial, sans-serif">ĉ = 2.00 [0.34, 2.45]</text>
-<text x="310" y="356.0" font-size="10" fill="#1a1a1a" text-anchor="start" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
 <rect x="546" y="58" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="556.56" y1="248" x2="556.56" y2="252" stroke="#444444" stroke-width="0.8"/>
 <text x="556.56" y="263" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -294,7 +292,7 @@
 <text x="641.0" y="277" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₀</text>
 <text transform="translate(519,153.0) rotate(-90)" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₁</text>
 <text x="546" y="40" font-size="12" font-weight="bold" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">Mistral-7B-Instruct-v0.3</text>
-<text x="546" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3</text>
+<text x="546" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3 · regime, both arms: offset</text>
 <line x1="546.0" y1="248.0" x2="736.0" y2="58.0" stroke="#9a9a9a" stroke-width="0.9" stroke-dasharray="4,3"/>
 <polygon points="546.0,234.87 550.75,232.19 555.5,229.5 560.25,226.8 565.0,224.03 569.75,221.35 574.5,218.72 579.25,215.96 584.0,213.23 588.75,210.48 593.5,207.63 598.25,204.79 603.0,201.87 607.75,199.07 612.5,196.1 617.25,193.11 622.0,190.09 626.75,186.96 631.5,183.74 636.25,180.31 641.0,176.69 645.75,172.84 650.5,168.89 655.25,164.68 660.0,160.3 664.75,155.88 669.5,151.34 674.25,146.76 679.0,142.1 683.75,137.47 688.5,132.79 693.25,128.11 698.0,123.37 702.75,118.65 707.5,113.94 712.25,109.27 717.0,104.57 721.75,99.8 726.5,94.94 731.25,90.23 736.0,85.43 736.0,128.31 731.25,131.13 726.5,133.9 721.75,136.6 717.0,139.34 712.25,142.11 707.5,144.85 702.75,147.61 698.0,150.34 693.25,153.18 688.5,155.96 683.75,158.78 679.0,161.61 674.25,164.56 669.5,167.46 664.75,170.54 660.0,173.59 655.25,176.8 650.5,180.14 645.75,183.79 641.0,187.66 636.25,191.64 631.5,195.78 626.75,200.03 622.0,204.49 617.25,208.95 612.5,213.52 607.75,218.1 603.0,222.72 598.25,227.36 593.5,232.03 588.75,236.76 584.0,241.43 579.25,246.21 574.5,248.0 569.75,248.0 565.0,248.0 560.25,248.0 555.5,248.0 550.75,248.0 546.0,248.0" fill="#D55E00" fill-opacity="0.13" stroke="none"/>
 <line x1="546.0" y1="235.58" x2="736.0" y2="71.01" stroke="#444444" stroke-width="1.2" stroke-dasharray="1.5,3"/>
@@ -342,7 +340,6 @@
 
 <text x="552" y="71.0" font-size="10" fill="#D55E00" text-anchor="start" font-family="Helvetica, Arial, sans-serif">g = 0.19 [-0.02, 0.43]</text>
 <text x="552" y="83.5" font-size="10" fill="#444444" text-anchor="start" font-family="Helvetica, Arial, sans-serif">ĉ off the scale</text>
-<text x="552" y="96.0" font-size="10" fill="#1a1a1a" text-anchor="start" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
 <rect x="546" y="318" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="556.56" y1="508" x2="556.56" y2="512" stroke="#444444" stroke-width="0.8"/>
 <text x="556.56" y="523" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -412,9 +409,8 @@
 <circle cx="666.33" cy="353.89" r="2.9" fill="#0072B2" fill-opacity="0.72" stroke="#ffffff" stroke-width="0.6"/>
 <circle cx="615.67" cy="353.89" r="2.9" fill="#0072B2" fill-opacity="0.72" stroke="#ffffff" stroke-width="0.6"/>
 
-<text x="730" y="475.0" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">g = 0.33 [0.07, 0.57]</text>
-<text x="730" y="487.5" font-size="10" fill="#444444" text-anchor="end" font-family="Helvetica, Arial, sans-serif">ĉ off the scale</text>
-<text x="730" y="500.0" font-size="10" fill="#1a1a1a" text-anchor="end" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
+<text x="730" y="487.5" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">g = 0.33 [0.07, 0.57]</text>
+<text x="730" y="500.0" font-size="10" fill="#444444" text-anchor="end" font-family="Helvetica, Arial, sans-serif">ĉ off the scale</text>
 <rect x="788" y="58" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="798.56" y1="248" x2="798.56" y2="252" stroke="#444444" stroke-width="0.8"/>
 <text x="798.56" y="263" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -439,7 +435,7 @@
 <text x="883.0" y="277" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₀</text>
 <text transform="translate(761,153.0) rotate(-90)" font-size="10.5" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">p₁</text>
 <text x="788" y="40" font-size="12" font-weight="bold" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">Gemma-2-9B-it</text>
-<text x="788" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3</text>
+<text x="788" y="52" font-size="10" fill="#444444" font-family="Helvetica, Arial, sans-serif">critical · R3 · regime, both arms: offset</text>
 <line x1="788.0" y1="248.0" x2="978.0" y2="58.0" stroke="#9a9a9a" stroke-width="0.9" stroke-dasharray="4,3"/>
 <polygon points="788.0,227.52 792.75,227.55 797.5,227.59 802.25,227.63 807.0,227.67 811.75,227.69 816.5,227.68 821.25,227.68 826.0,227.67 830.75,227.6 835.5,227.5 840.25,227.35 845.0,227.2 849.75,226.96 854.5,226.7 859.25,226.34 864.0,225.86 868.75,225.33 873.5,224.73 878.25,224.11 883.0,223.46 887.75,222.79 892.5,222.11 897.25,221.4 902.0,220.64 906.75,219.91 911.5,219.15 916.25,218.43 921.0,217.67 925.75,216.91 930.5,216.19 935.25,215.45 940.0,214.69 944.75,213.92 949.5,213.17 954.25,212.41 959.0,211.63 963.75,210.84 968.5,210.06 973.25,209.29 978.0,208.49 978.0,230.88 973.25,230.84 968.5,230.82 963.75,230.8 959.0,230.81 954.25,230.78 949.5,230.75 944.75,230.7 940.0,230.68 935.25,230.68 930.5,230.69 925.75,230.67 921.0,230.67 916.25,230.65 911.5,230.68 906.75,230.71 902.0,230.71 897.25,230.75 892.5,230.8 887.75,230.85 883.0,230.95 878.25,231.04 873.5,231.18 868.75,231.37 864.0,231.59 859.25,231.83 854.5,232.11 849.75,232.42 845.0,232.79 840.25,233.21 835.5,233.69 830.75,234.24 826.0,234.81 821.25,235.43 816.5,236.07 811.75,236.76 807.0,237.44 802.25,238.15 797.5,238.87 792.75,239.61 788.0,240.36" fill="#D55E00" fill-opacity="0.13" stroke="none"/>
 <line x1="788.0" y1="243.85" x2="978.0" y2="65.26" stroke="#444444" stroke-width="1.2" stroke-dasharray="1.5,3"/>
@@ -487,7 +483,6 @@
 <polygon points="802.58,227.92 808.08,233.42 802.58,238.92 797.08,233.42" fill="#ffffff" stroke="#D55E00" stroke-width="1.8"/>
 <text x="794" y="71.0" font-size="10" fill="#D55E00" text-anchor="start" font-family="Helvetica, Arial, sans-serif">g = 0.92 [0.84, 1.01]</text>
 <text x="794" y="83.5" font-size="10" fill="#D55E00" text-anchor="start" font-family="Helvetica, Arial, sans-serif">ĉ = 1.10 [0.97, 1.23]</text>
-<text x="794" y="96.0" font-size="10" fill="#1a1a1a" text-anchor="start" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
 <rect x="788" y="318" width="190" height="190" fill="#ffffff" stroke="#444444" stroke-width="0.8"/>
 <line x1="798.56" y1="508" x2="798.56" y2="512" stroke="#444444" stroke-width="0.8"/>
 <text x="798.56" y="523" font-size="10" fill="#1a1a1a" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">1</text>
@@ -557,9 +552,8 @@
 <circle cx="883.0" cy="425.67" r="2.9" fill="#0072B2" fill-opacity="0.72" stroke="#ffffff" stroke-width="0.6"/>
 <circle cx="802.78" cy="455.22" r="2.9" fill="#0072B2" fill-opacity="0.72" stroke="#ffffff" stroke-width="0.6"/>
 <polygon points="905.61,384.89 911.11,390.39 905.61,395.89 900.11,390.39" fill="#ffffff" stroke="#0072B2" stroke-width="1.8"/>
-<text x="972" y="475.0" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">g = 0.21 [-0.01, 0.46]</text>
-<text x="972" y="487.5" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">ĉ = 3.54 [-1.29, 9.89]</text>
-<text x="972" y="500.0" font-size="10" fill="#1a1a1a" text-anchor="end" font-family="Helvetica, Arial, sans-serif">regime: offset</text>
+<text x="972" y="487.5" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">g = 0.21 [-0.01, 0.46]</text>
+<text x="972" y="500.0" font-size="10" fill="#0072B2" text-anchor="end" font-family="Helvetica, Arial, sans-serif">ĉ = 3.54 [-1.29, 9.89]</text>
 <circle cx="71" cy="598" r="3.2" fill="#444444" fill-opacity="0.72" stroke="#ffffff" stroke-width="0.6"/>
 <text x="85" y="601.5" font-size="10" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">one item</text>
 <line x1="145.8" y1="598" x2="163.8" y2="598" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="4,3"/>

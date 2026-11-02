@@ -305,6 +305,14 @@
  },
  {
   "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct",
+  "label": "regime (both arms)",
+  "value": "offset",
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
   "panel": "Qwen2.5-7B-Instruct critical",
   "label": "g",
   "value": 0.1180434978328253,
@@ -334,14 +342,6 @@
   "value": -2.7454456308563957,
   "source": "results/R3/R3_qwen_output_items40_K10.json",
   "json_path": "analysis/arms/critical/c"
- },
- {
-  "figure": "F2",
-  "panel": "Qwen2.5-7B-Instruct critical",
-  "label": "regime",
-  "value": "offset",
-  "source": "results/R3/R3_qwen_output_items40_K10.json",
-  "json_path": "analysis/regime"
  },
  {
   "figure": "F2",
@@ -393,10 +393,10 @@
  },
  {
   "figure": "F2",
-  "panel": "Qwen2.5-7B-Instruct praise",
-  "label": "regime",
+  "panel": "Mistral-7B-Instruct-v0.3",
+  "label": "regime (both arms)",
   "value": "offset",
-  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
   "json_path": "analysis/regime"
  },
  {
@@ -433,14 +433,6 @@
  },
  {
   "figure": "F2",
-  "panel": "Mistral-7B-Instruct-v0.3 critical",
-  "label": "regime",
-  "value": "offset",
-  "source": "results/R3/R3_mistral_output_items40_K10.json",
-  "json_path": "analysis/regime"
- },
- {
-  "figure": "F2",
   "panel": "Mistral-7B-Instruct-v0.3 praise",
   "label": "g",
   "value": 0.33320052790159116,
@@ -473,10 +465,10 @@
  },
  {
   "figure": "F2",
-  "panel": "Mistral-7B-Instruct-v0.3 praise",
-  "label": "regime",
+  "panel": "Gemma-2-9B-it",
+  "label": "regime (both arms)",
   "value": "offset",
-  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
   "json_path": "analysis/regime"
  },
  {
@@ -529,14 +521,6 @@
  },
  {
   "figure": "F2",
-  "panel": "Gemma-2-9B-it critical",
-  "label": "regime",
-  "value": "offset",
-  "source": "results/R3/R3_gemma_output_items40_K10.json",
-  "json_path": "analysis/regime"
- },
- {
-  "figure": "F2",
   "panel": "Gemma-2-9B-it praise",
   "label": "g",
   "value": 0.20688598909514178,
@@ -582,14 +566,6 @@
   "value": 9.89339933807368,
   "source": "results/R3/R3_gemma_output_items40_K10.json",
   "json_path": "analysis/arms/praise/c_ci95/1"
- },
- {
-  "figure": "F2",
-  "panel": "Gemma-2-9B-it praise",
-  "label": "regime",
-  "value": "offset",
-  "source": "results/R3/R3_gemma_output_items40_K10.json",
-  "json_path": "analysis/regime"
  },
  {
   "figure": "F3",
