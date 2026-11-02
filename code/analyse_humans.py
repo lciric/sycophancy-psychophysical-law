@@ -9,7 +9,9 @@ stimulus id of preregistrations/R5_materials/R5_stimuli.csv (R000-R239, ATT_NEG,
 reduced to these three columns; nothing else is used.
 
 Exclusion (fixed in section 3 R5 before any data): a reader who fails either attention check is excluded, with all
-their ratings. ATT_NEG passes at 1 or 2, ATT_POS at 4 or 5; a reader who did not rate both checks is excluded.
+their ratings. ATT_NEG passes at 1 or 2, ATT_POS at 4 or 5; a reader who did not rate both checks is excluded. A reader
+who took several sessions met each check once per session: every one of those ratings must pass. A reader who rated the
+same response twice stops the analysis (the session plan forbids it).
 
 Analysis: per response, the mean over its valid readers. Per item, arm and condition, the two responses k = 0, 1 give
 K = 2 values, analysed by code/analyse_runs.py (C1, C2, regime). C5: per arm, Spearman's rho between the human item
@@ -77,13 +79,19 @@ def load_ratings(path, stim):
     return by_reader
 
 
-def analyse(ratings_path):
+def analyse(ratings_path, label="R5"):
     stim = load_stimuli()
     by_reader = load_ratings(ratings_path, stim)
     valid, excluded = {}, []
     for pid, rs in sorted(by_reader.items()):
-        checks = {sid: rating for sid, rating in rs if sid in VALID}
-        ok = all(sid in checks and checks[sid] in VALID[sid] for sid in VALID)
+        seen = [sid for sid, _ in rs if sid not in VALID]
+        if len(seen) != len(set(seen)):
+            rp.fail(f"reader {pid} rated the same response twice")
+        checks = {}
+        for sid, rating in rs:
+            if sid in VALID:
+                checks.setdefault(sid, []).append(rating)
+        ok = all(sid in checks and all(r in VALID[sid] for r in checks[sid]) for sid in VALID)
         (valid.__setitem__(pid, rs) if ok else excluded.append(pid))
     per_resp = {}
     for pid, rs in valid.items():
@@ -104,7 +112,7 @@ def analyse(ratings_path):
         for i in range(30):
             arms[arm][str(i)] = {c: [human[(arm, i, c, k)] for k in (0, 1)] for c in ("neutral", "pressure")}
     tmp = HERE / ".r5_input.json"
-    tmp.write_text(json.dumps({"meta": {"run": "R5"}, "arms": arms}))
+    tmp.write_text(json.dumps({"meta": {"run": label}, "arms": arms}))
     _, items, data = ar.load(tmp)
     tmp.unlink()
     res = ar.analyse(data)
@@ -124,14 +132,14 @@ def analyse(ratings_path):
     crit = dict(res["criteria"], C5_humans_track_judge=bool(c5_ok))
     outcome = "A" if all(crit.values()) else "B"
     readers = [len(v) for v in per_resp.values()]
-    return {"readers_total": len(by_reader), "readers_excluded": len(excluded), "excluded_ids": excluded,
+    return {"run": label, "readers_total": len(by_reader), "readers_excluded": len(excluded), "excluded_ids": excluded,
             "valid_readers_per_response": {"min": int(min(readers)), "median": float(np.median(readers)), "max": int(max(readers))},
             "analysis": res, "C5": c5, "criteria": crit, "outcome": outcome}
 
 
 def report(out):
     iv = lambda v: f"[{v[0]:.3f}, {v[1]:.3f}]"
-    print(f"R5 human readers · {out['readers_total']} readers, {out['readers_excluded']} excluded by attention checks · valid readers per response "
+    print(f"{out['run']} human readers · {out['readers_total']} readers, {out['readers_excluded']} excluded by attention checks · valid readers per response "
           f"min {out['valid_readers_per_response']['min']}, median {out['valid_readers_per_response']['median']}")
     for arm, a in out["analysis"]["arms"].items():
         print(f"  {arm:<9} g={a['g']:.3f} {iv(a['g_ci95'])} c={a['c']:.3f} {iv(a['c_ci95'])} mean D={a['mean_displacement']:+.3f} · "
@@ -187,13 +195,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("ratings", nargs="?")
     ap.add_argument("--json")
+    ap.add_argument("--label", default="R5", help="R5 (Prolific, as preregistered) or R5-pilot (acquaintance readers, declared note)")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
     if args.selftest:
         return selftest()
     if not args.ratings:
         ap.error("a ratings file is required")
-    out = analyse(args.ratings)
+    out = analyse(args.ratings, label=args.label)
     report(out)
     if args.json:
         Path(args.json).write_text(json.dumps(out, indent=1) + "\n")

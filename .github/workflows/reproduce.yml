@@ -29,6 +29,8 @@ jobs:
         run: python3 -I code/make_r5_stimuli.py --check
       - name: Self-test of the frozen human-reader analysis (R5)
         run: python3 -I code/analyse_humans.py --selftest
+      - name: Rebuild the R5 reading-page template and compare byte for byte
+        run: python3 -I code/make_r5_page.py --template /tmp/page.html && cmp /tmp/page.html preregistrations/R5_materials/pilot/reading_page_template.html
       - name: Recompute every published follow-up result from its input
         run: python3 -I code/check_results.py
       - name: Regenerate the figures from the published files and compare byte for byte

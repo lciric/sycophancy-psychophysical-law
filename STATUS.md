@@ -48,7 +48,7 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 
 ## Later (planned)
 
-- **R5:** human readers on 240 released responses, as preregistered. Materials and frozen analysis are fixed in [`preregistrations/R5_materials/`](preregistrations/R5_materials/README.md); the study opens once the author's Prolific account is approved.
+- **R5:** human readers on 240 released responses, as preregistered. Materials and frozen analysis are fixed in [`preregistrations/R5_materials/`](preregistrations/R5_materials/README.md); the study opens once the author's Prolific account is approved. A pilot with acquaintance readers, **R5-pilot**, is declared in a dated note before any reading and reported separately.
 - **R2 at full precision** (transformers, bf16/fp32). This removes the quantisation deviation and the sensitivity to the llama.cpp implementation. Add more readings per item on the praise arm.
 - **R3 secondary reading:** the R1a reader (Qwen2.5-7B, CPU) on the R3 responses, as preregistered. It did not fit before 13:00 Paris and remains registered unchanged.
 - **Manuscript:** cite the numbers of `code/reproduce.py`, and state that the third rival is excluded by magnitude, not by the count of descents.

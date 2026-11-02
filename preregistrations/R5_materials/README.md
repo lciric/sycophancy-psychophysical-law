@@ -28,3 +28,7 @@
 - **C5:** per arm, Spearman's ρ between the human item displacements and the campaign-1 judge's item displacements on the same responses, with a 95 % item-bootstrap interval (B = 10 000, seed 20261105); C5 holds if the interval excludes 0 in both arms.
 
 Outcome A: C1, C2 and C5 hold — human readers see the attraction and the judge tracks them. Outcome B: any fails. Its self-test runs on simulated readers.
+
+## Pilot with acquaintance readers
+
+A pilot that borrows these materials with readers the author knows is declared, before any reading, in [`2026-11-02_note_R5_pilot_acquaintances.md`](2026-11-02_note_R5_pilot_acquaintances.md). It is reported as **R5-pilot**, never as R5.
