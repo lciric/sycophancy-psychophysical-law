@@ -1,7 +1,8 @@
 """Recompute every published follow-up result from its public input with the frozen analysis, and compare.
 
-For each results/**/*_input_*.json, runs code/analyse_runs.py on it and checks that the 'analysis' section equals the
-one in the matching *_output_*.json, value for value. Exit status 1 on any difference or missing file.
+For each results/**/*_input_*.json, runs code/analyse_runs.py on it (with --oos when the input's meta has "oos": true)
+and checks that the 'analysis' section equals the one in the matching *_output_*.json, value for value. Exit status 1
+on any difference or missing file.
 Usage: python3 -I code/check_results.py
 """
 import json
@@ -21,9 +22,10 @@ for inp in inputs:
         print(f"MISSING  {out.relative_to(ROOT)}")
         bad += 1
         continue
+    extra = ["--oos"] if json.loads(inp.read_text()).get("meta", {}).get("oos") is True else []
     with tempfile.TemporaryDirectory() as tmp:
         tmp_out = Path(tmp) / "out.json"
-        subprocess.run([sys.executable, "-I", "-B", str(ROOT / "code" / "analyse_runs.py"), str(inp), "--json", str(tmp_out)],
+        subprocess.run([sys.executable, "-I", "-B", str(ROOT / "code" / "analyse_runs.py"), str(inp), *extra, "--json", str(tmp_out)],
                        check=True, capture_output=True, text=True)
         same = json.loads(tmp_out.read_text())["analysis"] == json.loads(out.read_text())["analysis"]
     print(("OK       " if same else "DIFFERS  ") + str(out.relative_to(ROOT)))
