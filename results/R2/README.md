@@ -18,17 +18,19 @@ Preregistered criteria: **C1 (attraction) holds; C2 (two destinations) holds**, 
 - Under praise the rating barely moves: g = 0.14, against 0.68 when a judge read the free-text verdicts of campaign 1. With g that small, ĉ_praise is poorly determined.
 - The praise margins are thin: the lower bound of g is 0.029, and C2 passes by 0.062 between the two ĉ intervals.
 
-## Sensitivity to the inference build (post hoc, descriptive)
+## Sensitivity to the llama.cpp implementation (post hoc, descriptive)
 
-The 120 primary readings were replayed with llama-cpp-python 0.3.16 instead of 0.3.36, with the same weights and the same prompts (byte-identical on a 24-reading sample), then analysed by the same frozen code. The two series agree closely: r = 0.9985 over the 160 pairs, with median |Δr| 0.021, maximum 0.112, and mean signed difference +0.004.
+The 120 primary readings were replayed under another llama.cpp implementation, then analysed by the same frozen code with the same seed. The replay used llama-cpp-python 0.3.16 instead of 0.3.36, another machine, 2 threads instead of 4, and all-position logits. It therefore isolates the implementation as a whole, not the version alone. The weights are the same file, by declaration, and the prompts are byte-identical to the run's. Over the 120 readings the two series agree closely: correlation 0.9982, median |Δr| 0.022, maximum 0.112 (item 34, praise), mean signed difference +0.003. No r is bit-identical.
 
-| arm | run (0.3.36): g; ĉ | replay (0.3.16): g; ĉ |
+| arm | run (llama-cpp-python 0.3.36): g; ĉ | replay (other implementation, 0.3.16): g; ĉ |
 |---|---|---|
 | critical | 0.625 [0.569, 0.680]; 2.871 [2.800, **2.930**] | 0.639 [0.585, 0.690]; 2.890 [2.821, **2.945**] |
 | praise | 0.137 [0.029, 0.242]; 3.724 [**2.992**, 5.047] | 0.144 [0.037, 0.254]; 3.655 [**2.904**, 4.644] |
 | criteria | C1 true; C2 true (margin +0.062) | C1 true; **C2 false** (overlap 0.041) |
 
-C1 holds under both builds. C2 passes on the preregistered run but fails under the second build. **Two destinations are therefore not robustly established in the model's own rating.** The preregistered verdict stays the run's; this section does not requalify it. Files: [`R2_sensitivity_llamacpp0.3.16_input_items0-39.json`](R2_sensitivity_llamacpp0.3.16_input_items0-39.json) and its output. The replay kept r but not the five probabilities, so these 120 values cannot be recomputed from p. An independent re-check of this section was still running when it was published (2 November, 10:10 Paris).
+The margin is the lower bound of the ĉ_praise interval minus the upper bound of the ĉ_critical interval. Both analyses draw the same bootstrap indices, so the switch comes from the r values alone, mostly through the lower bound of ĉ_praise (2.992 → 2.904). That bound is poorly determined, because ĉ is obtained by dividing by a slope g ≈ 0.14. C1 holds under both implementations. C2 passes on the preregistered run but fails under the other implementation. **Two destinations are therefore not robustly established in the model's own rating.** The preregistered verdict stays the run's; this section does not requalify it. Files: [`R2_sensitivity_llamacpp0.3.16_input_items0-39.json`](R2_sensitivity_llamacpp0.3.16_input_items0-39.json) and its output. The replay kept r but not the five probabilities, so these 120 values rest on the replayer's declaration and cannot be recomputed from p. Two cross-checks support them: the 5 readings shared with an earlier 24-reading replay, which kept the digit mass, are bit-identical, and the item-level correlation with the run is 0.998.
+
+**Independent re-check of this section:** a fresh instance, working from the files only, found it **conforming with reservations** (report SHA-256 `b463154d0260d503ff6062a8921b4a4622370ae9616d54c2244bf2bbbe342211`, private). It reproduced the frozen analysis byte for byte, recovered all 22 values of the table, and found the 120 prompts identical, with the same token ids and one BOS. Its reservations are applied above: the effect is attributed to the implementation, not the version alone; agreement is given on the 120 readings; provenance rests on a declaration.
 
 ## Verification
 
@@ -41,4 +43,4 @@ C1 holds under both builds. C2 passes on the preregistered run but fails under t
   - independent report: `eecfa126c2a857e1934728923d12a167cd44f3ec0c611fbe079df7831e74dd8d`
   - all of them in a private repository at commit `c6cb366`.
 - **Instrument incident, before any usable data:** a first attempt read flat logits after a change in llama-cpp-python. It produced 282 uniform readings, r = 3.0 everywhere. It was rejected on that instrument criterion alone, without any criterion being computed, and is kept. R2 was then rerun from zero.
-- **Reproducibility:** the readings replay exactly with llama-cpp-python 0.3.36 on the same stack, and within |Δr| ≲ 0.1 with other builds (see the sensitivity above).
+- **Reproducibility:** the readings replay bit-identically with llama-cpp-python 0.3.36 on the same stack, as the independent recomputation did for 5 readings. Under another llama.cpp implementation they replay within |Δr| ≈ 0.1 (see the sensitivity above).
