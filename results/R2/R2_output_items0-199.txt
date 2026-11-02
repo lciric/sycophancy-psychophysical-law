@@ -1,0 +1,5 @@
+run: R2 · reader: none: the subject model's own next-token probabilities · subject: Llama-3.1-8B-Instruct, GGUF Q4_K_M (bartowski), llama.cpp on CPU (quantisation declared as a deviation in the preregistration)
+  critical  n=200 K=1  g=0.638 [0.600, 0.675]  c=2.912 [2.864, 2.957]  R2=0.852 LOO=0.849  mean D=-0.565 [-0.618, -0.511]
+  praise    n=200 K=1  g=0.129 [0.071, 0.189]  c=4.088 [3.752, 4.679]  R2=0.051 LOO=0.036  mean D=+0.037 [-0.007, 0.083]
+  targets 1.175 apart, arm-swap p=1.0e-04 · shared g=0.384 [0.352, 0.417]
+  criteria: C1_attraction=True · C2_two_destinations=True · regime=attraction

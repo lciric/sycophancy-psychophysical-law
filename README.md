@@ -32,6 +32,7 @@ git clone https://github.com/lciric/sycophancy-psychophysical-law && cd sycophan
 sha256sum -c SHA256SUMS
 python3 -m pip install -r requirements.txt
 python3 -I code/reproduce.py --check
+python3 -I code/check_results.py      # the follow-up results published so far
 ```
 
 About two seconds on a laptop. The script first checks the custody chain — stored item means equal the means of the per-generation ratings; each result file's `gen_sha` equals the SHA-256 of its generation file; one generation per item, seed index and condition; every seed follows its declared formula — and aborts on any break. It then recomputes every number on this page (full output: [`code/reproduce_output.txt`](code/reproduce_output.txt)) and compares them with [`code/expected.json`](code/expected.json). Each resampling draws from a named child of `SeedSequence(20261101)`, so with the pinned numpy every value is exact. The [Actions log](https://github.com/lciric/sycophancy-psychophysical-law/actions/workflows/reproduce.yml) shows the same four commands on a clean machine at every push.
@@ -52,7 +53,7 @@ Full hashes in [`SHA256SUMS`](SHA256SUMS). From the files' metadata: Llama-3.1-8
 
 | missing | SHA-256 recorded in the released metadata |
 |---|---|
-| item texts (30 + 10) | — |
+| item texts (30 + 10), except three (items 0, 17 and 33) quoted verbatim as genre examples in [`preregistrations/R4_brief.txt`](preregistrations/R4_brief.txt) | — |
 | judge prompt | `6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae` |
 | preregistrations of the critical and praise campaigns | `6f0db5de1344013eb3318ef2c37e38a758ad58a53f0dab4fda5e193ee47a363a`, `14e2757893c404d3fd3677b3dd2956663f7dc4cc852e2e2fb81ce1b28c999083` |
 | sealed predictions of campaign 2 | `267038e2d2083e68f33b621d82b568b222876ae32596632e8ea6561814342891` |
@@ -69,9 +70,9 @@ Without the item texts and the judge prompt, the generations cannot be regenerat
 - By construction of the two seed formulas, 25 of the 30 items reuse, in the other campaign, the ten seeds of a different item; the effect of this on the estimates is not tested here.
 - Items 0–29 of campaign 2 carry the ids of campaign 1. Without the item texts their identity is supported here only indirectly (unpressured means correlate at r = 0.95 and 0.97), so the out-of-sample test is one of new draws for 30 items and of new stimuli for 10.
 
-## Follow-up runs — preregistered, not yet run
+## Follow-up runs — preregistered, results in progress
 
-Five runs, each aimed at one of the limits above, are preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md): an open-weights judge on the released responses (R1), the model's own rating with no judge (R2), three other model families (R3), sixty new items with no free parameter (R4), human readers (R5). The preregistration was archived on Zenodo before any of these runs started: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831) (release v2026.11.1, 1 November 2026, 23:03 UTC). Each has two outcomes written in advance and is analysed by the frozen [`code/analyse_runs.py`](code/analyse_runs.py), whose self-test runs in CI. No result of these runs is in this repository; any that enters it will be added only after an independent recomputation from its raw files.
+Five runs, each aimed at one of the limits above, are preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md): an open-weights judge on the released responses (R1), the model's own rating with no judge (R2), three other model families (R3), sixty new items with no free parameter (R4), human readers (R5). The preregistration was archived on Zenodo before any of these runs started: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831) (release v2026.11.1, 1 November 2026, 23:03 UTC). Each has two outcomes written in advance and is analysed by the frozen [`code/analyse_runs.py`](code/analyse_runs.py), whose self-test runs in CI. Results enter [`results/`](results/) only after an independent recomputation from their raw files, and [`code/check_results.py`](code/check_results.py) recomputes each of them from its published input in CI; [`STATUS.md`](STATUS.md) says what is done, running and next. First result, **R2** (the model's own 1–5 rating, no judge): the attraction under criticism holds (g = 0.63 [0.57, 0.68], R² = 0.91); under praise it is weak (g = 0.14 [0.03, 0.24]); the two-destination criterion passes on the run but not under a second inference build, so it is not established in this channel ([`results/R2/`](results/R2/README.md)).
 
 ## Citation
 
