@@ -38,7 +38,7 @@ So the outcome is **C**: "within this range of wording the law is insensitive to
 
 **Reading** (descriptive, not preregistered):
 - **At the standard dose, campaign 1 is found again with new seeds:** g = 0.68 and 0.60, and two separate targets, 1.33 and 2.85. Campaign 1 found g = 0.72 and 0.68, with ĉ = 1.46 and 2.94.
-- **Under praise, the more insistent the praise, the lower the destination.** ĉ falls from 4.01 to 2.85 to 2.48, and the mean shift from +0.39 to +0.15 to −0.10.
+- **Under praise, the more insistent the praise, the lower the destination.** ĉ falls from 4.01 to 2.85 to 2.47, and the mean shift from +0.39 to +0.15 to −0.10.
 - **Under criticism, the mean shift is largest at the standard dose:** −0.47, −0.86, then −0.15.
 - **At the strong dose, the rating under pressure keeps little of the item's own rating.** 1 − g is 0.37 and 0.20. The rating is set back toward the middle of the scale, and the mean shift is zero in both arms. Here "attraction" holds only in the sense of the fit: there is no move toward what the user said.
 
