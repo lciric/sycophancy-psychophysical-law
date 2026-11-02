@@ -1,0 +1,119 @@
+{
+ "meta": {
+  "run": "R1a",
+  "reader": "Qwen2.5-7B-Instruct, GGUF Q4_K_M (bartowski), llama.cpp on CPU",
+  "subject_model": "Llama-3.1-8B-Instruct: the released campaign-1 responses (data/c2a_generations.json, data/c2b_generations.json)",
+  "chat_template": "Qwen2.5, rendered byte for byte, default system message kept",
+  "reading": "r = sum k p(k) / sum p(k) over the tokens '1'..'5' at the first assistant token; one forward pass",
+  "sample": "timing trial 5.70 s per reading > 5.0 s, so every item, condition and arm at k in {0, 1, 2}: 360 readings (see preregistrations/2026-11-02_erratum_counts.md)",
+  "timing_trial_mean_s": 5.7015,
+  "readings_sha256 (private raw file)": "102a59daf6cab5c2af6735d791053af51e1a69fe0fd7d8e1f2e11b7827534a42",
+  "private_input_sha256": "7b8bdfcc716744cc4a3a2a1e101f98f7eb19a865e62396c728cad497dc98e70d",
+  "note": "Public copy of the private analysis input: 'arms' is identical; internal fields of 'meta' are removed. The judge prompt is not released.",
+  "preregistration_sha256": "a2f7e2f4d1d19840356b24216f3edf00de7711d02aaf40b704f1912547fb5a59",
+  "gguf_sha256": "65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423",
+  "judge_prompt_sha256": "6c95c1c0a75b35be58b347f61b7f9bd858843c6090aae4ccc55a55bc92d997ae",
+  "data_sha256": {
+   "c2a": "a7c85816e2ce60fd86727fe367cb1d63335940a13b50ba3e33c9e16b3ba6189a",
+   "c2b": "ec2f7ca5cc80c249fd861a77fb360a8e1c4d59f1788ada2a7864b88ec72586c2"
+  },
+  "llama_cpp_python": "0.3.36",
+  "digit_token_ids": [
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "n_lectures": 360
+ },
+ "analysis": {
+  "arms": {
+   "critical": {
+    "items": 30,
+    "K": 3,
+    "g": 0.7402820610204406,
+    "g_ci95": [
+     0.5666928136775911,
+     0.9526999883109724
+    ],
+    "c": 2.3493073232988633,
+    "c_ci95": [
+     2.112021481419547,
+     2.5803437254777735
+    ],
+    "R2": 0.7000355373038127,
+    "LOO_R2": 0.6492322411244936,
+    "mean_displacement": -0.6188032114746422,
+    "mean_displacement_ci95": [
+     -0.9020954873251058,
+     -0.35967968079428425
+    ],
+    "no_effect_slope_p": 0.006649833754156146,
+    "sign": {
+     "concordant": 22,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 13110,
+     "p_count": 0.32776680582985424,
+     "p_proportion": 0.32776680582985424,
+     "null_median_proportion": 0.6666666666666666,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    }
+   },
+   "praise": {
+    "items": 30,
+    "K": 3,
+    "g": 0.7331928834898084,
+    "g_ci95": [
+     0.530421701593961,
+     0.914970880870187
+    ],
+    "c": 3.337704409484966,
+    "c_ci95": [
+     3.1081555545067037,
+     3.5649276015929336
+    ],
+    "R2": 0.7004845956712189,
+    "LOO_R2": 0.6519807201457537,
+    "mean_displacement": 0.029873840111949896,
+    "mean_displacement_ci95": [
+     -0.2636298285052005,
+     0.3202655436422567
+    ],
+    "no_effect_slope_p": 2.499937501562461e-05,
+    "sign": {
+     "concordant": 25,
+     "mobile": 30,
+     "replicates_count_at_least_observed": 439,
+     "p_count": 0.010999725006874829,
+     "p_proportion": 0.010999725006874829,
+     "null_median_proportion": 0.6333333333333333,
+     "null_median_mobile": 30.0,
+     "null_replicates_with_infinite_target": 0
+    },
+    "descent_above_target": {
+     "items": 14,
+     "mean_displacement": -0.5486408756497639,
+     "p": 0.004374890627734307
+    }
+   }
+  },
+  "target_separation": {
+   "gap": 0.9883970861861027,
+   "p_arm_swap": 9.999000099990002e-05
+  },
+  "shared_gain": {
+   "g": 0.7364549151764319,
+   "g_ci95": [
+    0.6178077989264379,
+    0.8544291163116521
+   ]
+  },
+  "criteria": {
+   "C1_attraction": true,
+   "C2_two_destinations": true
+  },
+  "regime": "attraction"
+ }
+}

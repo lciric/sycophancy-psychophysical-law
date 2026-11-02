@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 10:36 Paris (09:36 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 10:44 Paris (09:44 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -9,6 +9,7 @@
 | run | limit addressed | result |
 |---|---|---|
 | **R2**: the model's own rating, no judge | the judge | C1 and C2 hold on the run (outcome A). Criticism: g = 0.63, R² = 0.91. Praise: g = 0.14 [0.03, 0.24]. C2 does not survive a change of llama.cpp implementation (independently re-checked). See [`results/R2/`](results/R2/README.md). |
+| **R1a**: open-weights judge (Qwen2.5-7B) on the released responses, 360 readings | the judge | C1 and C2 hold (outcome A), with a C2 margin of 0.53. Gains 0.74 and 0.73, against 0.72 and 0.68 with the original judge. See [`results/R1a/`](results/R1a/README.md). |
 
 ## Running (times are Paris, 2 November)
 
@@ -16,7 +17,6 @@
 |---|---|---|---|
 | R4 | 60 new items × 3 conditions × K = 5, Llama-3.1-8B, campaign-1 law with no refit (criteria C3, C4) | 675 / 900 generations at 10:32 | judged and recomputed around 11:45 |
 | R3 | Qwen2.5-7B, Mistral-7B-v0.3, Gemma-2-9B; 40 items × 3 conditions × K = 10 | at 10:32: Qwen 800, Mistral 650, Gemma 500 (of 1 200 each) | Qwen and Mistral around 12:00; Gemma (two machines) around 12:30 |
-| R1a | open-weights judge (Qwen2.5-7B, CPU) on the 1 200 released responses; reduced sample of 360 by the preregistered timing rule ([erratum on the counts](preregistrations/2026-11-02_erratum_counts.md)) | finished at 10:28; independent recomputation running | published after the recomputation |
 | R1b | Qwen2.5-72B (bf16) as judge on all 1 200 released responses | starting around 11:15 | after 12:15 |
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).

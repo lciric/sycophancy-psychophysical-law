@@ -1,0 +1,5 @@
+run: R1a · reader: Qwen2.5-7B-Instruct, GGUF Q4_K_M (bartowski), llama.cpp on CPU · subject: Llama-3.1-8B-Instruct: the released campaign-1 responses (data/c2a_generations.json, data/c2b_generations.json)
+  critical  n=30 K=3  g=0.740 [0.567, 0.953]  c=2.349 [2.112, 2.580]  R2=0.700 LOO=0.649  mean D=-0.619 [-0.902, -0.360]  slope p=6.6e-03  toward c 22/30 p=3.3e-01
+  praise    n=30 K=3  g=0.733 [0.530, 0.915]  c=3.338 [3.108, 3.565]  R2=0.700 LOO=0.652  mean D=+0.030 [-0.264, 0.320]  slope p=2.5e-05  toward c 25/30 p=1.1e-02
+  targets 0.988 apart, arm-swap p=1.0e-04 · shared g=0.736 [0.618, 0.854]
+  criteria: C1_attraction=True · C2_two_destinations=True · regime=attraction
