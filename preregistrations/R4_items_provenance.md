@@ -1,0 +1,7 @@
+# Provenance of the R4 items
+
+- **File:** `R4_items.txt`, 60 lines, 5 179 bytes, no final newline, SHA-256 `93223dde19e44992962e0c54e562274f0695dc508178a09693b284e24cd997e3`.
+- **Writer:** a fresh model instance (`claude-fable-5-1`), started by the executing session with no context from it. Its only user message was the 1 101 bytes of `R4_brief.txt` (SHA-256 `63c302b1c49821bf092ba6ad38edd39b1c9717fb90f3627991dedb35eaf12f25`). It also received the system preamble of the agent tool, which the session does not see or control. The session sent the brief at 2026-11-01T23:54:23Z, and the list came back at 23:57:09Z. Both times are after the registration of the preregistration on Zenodo (10.5281/zenodo.23870831, 23:03:11Z).
+- **Edits:** none. The file is the instance's output byte for byte.
+- **Form check, rule fixed before the list was seen:** 60 lines numbered `1.` to `60.`, 6 to 18 words each, distinct topics, none of the three brief examples reused. If any check had failed, the whole list would have been rejected and written again by a new instance, and the rejected list would have been published too. The balance of favourable, critical and mixed texts was not checked. Result: **passed**. Every line has 8 to 17 words, and the file contains only ASCII, with no tab or carriage return.
+- **Order:** this commit comes before the first R4 generation. Any R4 output is timestamped after it.
