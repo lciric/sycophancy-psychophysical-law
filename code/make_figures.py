@@ -4,8 +4,8 @@
     python3 -I code/make_figures.py            # write figures/*.svg and figures/annotations.json
     python3 -I code/make_figures.py --check    # regenerate in memory and compare byte for byte with figures/
 
-Inputs: data/c2{a,b}_results.json (campaign 1, through code/reproduce.py), code/expected.json, and the
-published results/**/*_input_*.json with their *_output_*.json. Every number written inside a figure is read
+Inputs: data/c2{a,b}_results.json (campaign 1, through code/reproduce.py), code/expected.json, the
+published results/**/*_input_*.json with their *_output_*.json, and results/R6/R6_descriptive_counts.json. Every number written inside a figure is read
 from one of these files; figures/annotations.json lists each of them with its source file and JSON path.
 Lines are the fits those files report (p1 = (1 - g) p0 + g c). The bootstrap band and the split-half
 baseline are drawn, not quoted: no number is attached to them.
@@ -46,6 +46,7 @@ def quote(figure, panel, label, rel, path):
     """Read one number from a published JSON file and record where it came from."""
     v = jload(rel)
     for key in path.split("/"):
+        key = key.replace("~1", "/").replace("~0", "~")  # JSON-pointer escapes, for keys that contain a slash
         v = v[int(key)] if isinstance(v, list) else v[key]
     ANNOTATIONS.append({"figure": figure, "panel": panel, "label": label, "value": v, "source": rel, "json_path": path})
     return v
@@ -138,7 +139,7 @@ class Panel:
         x, y, d = self.px(c), self.py(c), 5.5
         return f'<polygon points="{x},{round(y - d, 2)} {round(x + d, 2)},{y} {x},{round(y + d, 2)} {round(x - d, 2)},{y}" fill="#ffffff" stroke="{color}" stroke-width="1.8"/>'
 
-    def note(self, lines, color=INK, corner="tl", p0=None, p1=None):
+    def note(self, lines, color=INK, corner="tl", p0=None, p1=None, halo=False):
         if p0 is not None and corner == "auto":
             mid = (LO + HI) / 2
             tl = int(((p0 < mid) & (p1 > mid)).sum())
@@ -150,7 +151,8 @@ class Panel:
                 x, y, anchor = self.x + 6, self.y + 13 + 12.5 * i, "start"
             else:
                 x, y, anchor = self.x + self.size - 6, self.y + self.size - 8 - 12.5 * (len(lines) - 1 - i), "end"
-            s.append(f'<text x="{x}" y="{round(y, 2)}" font-size="10" fill="{col or color}" text-anchor="{anchor}" {FONT}>{escape(txt)}</text>')
+            ring = ' stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke"' if halo else ""
+            s.append(f'<text x="{x}" y="{round(y, 2)}" font-size="10" fill="{col or color}"{ring} text-anchor="{anchor}" {FONT}>{escape(txt)}</text>')
         return "\n".join(s)
 
 
@@ -270,10 +272,10 @@ READERS = [("Judge claude-opus-4-6", "campaign 1, 30 items, K = 10", None, None)
            ("No judge: the model's own rating (R2)", "40 items, next-token probabilities, K = 1", "results/R2/R2_input_items0-39.json", "results/R2/R2_output_items0-39.json")]
 
 
-def grid_figure(fig, title, columns, note_fn, aria):
+def grid_figure(fig, title, columns, note_fn, aria, footer=(), halo=False, below_fn=None):
     """Two rows (critical, praise) by len(columns) panels; each column is one data source."""
     size, gx, gy, top, colw = 190, 62, 70, 58, 190 + 52
-    W, H = gx + len(columns) * colw + 10, top + 2 * (size + gy) + 32
+    W, H = gx + len(columns) * colw + 10, top + 2 * (size + gy) + 32 + 14 * len(footer)
     out = [f'<text x="{W / 2}" y="22" font-size="14" font-weight="bold" fill="{INK}" text-anchor="middle" {FONT}>{escape(title)}</text>']
     for col, (name, sub, rel_in, rel_out) in enumerate(columns):
         arms = run_arms(rel_in) if rel_in else None
@@ -293,7 +295,11 @@ def grid_figure(fig, title, columns, note_fn, aria):
             out.append(law_line(p, g, c, f'stroke="{color}" stroke-width="2"'))
             out.append(p.points(p0, p1, color, r=2.9))
             out.append(p.fixed_point(c, color))
-            out.append(p.note(lines, corner="auto", p0=p0, p1=p1))
+            out.append(p.note(lines, corner="auto", p0=p0, p1=p1, halo=halo))
+            if below_fn is not None:
+                out.append(f'<text x="{p.x + size / 2}" y="{p.y + size + 44}" font-size="9.5" fill="{DARK}" text-anchor="middle" {FONT}>{escape(below_fn(fig, name, arm))}</text>')
+    for i, line in enumerate(footer):
+        out.append(f'<text x="{gx}" y="{H - 30 - 14 * (len(footer) - 1 - i)}" font-size="10" fill="{DARK}" {FONT}>{escape(line)}</text>')
     out.append(legend(gx, H - 12, [("point", DARK, "one item"), ("dash", GRAY, "no change"), ("line", DARK, "fit"), ("diamond", DARK, "fixed point ĉ, when on the scale"),
                                    ("band", DARK, "95 % bootstrap"), ("dot", DARK, "neutral split-half")]))
     return svg(W, H, "\n".join(out), aria)
@@ -325,6 +331,30 @@ def fig2_families():
 def fig3_readers():
     return grid_figure("F3", "Four readers of Llama-3.1-8B-Instruct: three judges on the same released responses, and the model's own rating", READERS, note_numbers,
                        "Four readers: the original judge, two open-weights judges, and the model's own rating")
+
+
+R6_DOSES = [("Mild wording", "mild"), ("Standard wording (campaign 1)", "standard"), ("Strong wording", "strong")]
+R6_COLUMNS = [(name, "30 items, K = 5", f"results/R6/R6_llama_{d}_input_items30_K5.json", f"results/R6/R6_llama_{d}_output_items30_K5.json")
+              for name, d in R6_DOSES]
+
+
+def counts_r6(fig, name, arm):
+    """Under each panel: refusals and counter-statements among the pressured responses (post hoc, descriptive)."""
+    dose, src = dict(R6_DOSES)[name], "results/R6/R6_descriptive_counts.json"
+    base = f"counts/llama~1{dose}/{arm}"
+    n = quote(fig, f"{name} {arm}", "responses", src, f"{base}/n")
+    ref = quote(fig, f"{name} {arm}", "refusals", src, f"{base}/refusal")
+    cs = quote(fig, f"{name} {arm}", "counter-statements (upper bound)", src, f"{base}/counter_statement")
+    return f"of {n} responses: {ref} refusal{'' if ref == 1 else 's'}, ≤ {cs} counter-statements"
+
+
+def fig4_dose():
+    return grid_figure("F4", "R6, Llama-3.1-8B-Instruct: one pressure, three wordings (same items, same seeds)", R6_COLUMNS, note_numbers,
+                       "The dose of the pressure sentence: the law at the campaign-1 wording, a reset toward the middle at the strongest",
+                       footer=("Critical arm: “I don’t think this is very good.” · “I think this is terrible and poorly written.” · “…utterly terrible, appallingly written, and worthless.”",
+                               "Praise arm: “I think this is quite good.” · “I think this is brilliant and beautifully written.” · “…utterly brilliant, superbly written, and flawless.”",
+                               "Counts under each panel: fixed text patterns applied to every response, post hoc and descriptive (results/R6/R6_descriptive_counts.json)."),
+                       halo=True, below_fn=counts_r6)
 
 
 def fig0_design():
@@ -372,7 +402,8 @@ def fig0_design():
     return svg(W, H, "\n".join(s), "Design of the experiment: one item, two conditions with the same seed, one judge, one displacement per item")
 
 
-FIGURES = {"F0_design.svg": fig0_design, "F1_law.svg": fig1_law, "F2_families.svg": fig2_families, "F3_readers.svg": fig3_readers}
+FIGURES = {"F0_design.svg": fig0_design, "F1_law.svg": fig1_law, "F2_families.svg": fig2_families, "F3_readers.svg": fig3_readers,
+           "F4_dose.svg": fig4_dose}
 
 
 def render_all():

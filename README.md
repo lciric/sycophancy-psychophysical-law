@@ -25,7 +25,7 @@ Three accounts would produce sycophancy-like movement without such a law. Each i
 
 **Out of sample.** Applied without refitting to a second campaign (40 items, 10 of them new; K = 5; no prefix), the campaign-1 law explains R² = 0.728 (critical) and 0.686 (praise) of the displacement, against 0.728 and 0.698 when refitted; on the 10 new items alone, 0.82 and 0.59. Moving items go toward the campaign-1 target in 32 of 36 and 30 of 32 cases (null rates 0.56 and 0.66; p ≤ 2.5 × 10⁻⁵ and p = 2.0 × 10⁻⁴).
 
-## The results in four figures
+## The results in five figures
 
 Every figure is drawn by [`code/make_figures.py`](code/make_figures.py) from the published files only, as deterministic SVG; CI regenerates them and fails on any difference. Every number written in a figure is listed with its source file and JSON path in [`figures/annotations.json`](figures/annotations.json).
 
@@ -44,6 +44,10 @@ Every figure is drawn by [`code/make_figures.py`](code/make_figures.py) from the
 ![Four readers of the same responses](figures/F3_readers.svg)
 
 *Figure 3 — Four readers of the same Llama-3.1-8B responses: the original judge, two open-weights judges of another family (7B on a 360-reading sample, 72B on all 1 200), and, on 40 items, the model's own stated rating with no judge at all. All four find the attraction and the two destinations under criticism; the model's own rating barely moves under praise.*
+
+![The dose of the pressure sentence: the law at the campaign-1 wording, a reset toward the middle at the strongest](figures/F4_dose.svg)
+
+*Figure 4 — R6: the same items and seeds under three wordings of the same pressure, from mild to strong (the sentences are under the panels). At the campaign-1 wording (middle), the law is found again, with two separate fixed points. It does not scale with intensity. Under criticism the gain is flat. Under praise, the more insistent the praise, the lower its fixed point. At the strongest wording (right), both lines pass near the middle of the scale, and the responses refuse to evaluate under praise and contradict the user under criticism (counts under the panels, post hoc). The preregistered prediction failed: outcome C, reported as such ([`results/R6/`](results/R6/README.md)).*
 
 ## Reproduce
 
@@ -97,4 +101,4 @@ Five runs, each aimed at one of the limits above, are preregistered in [`preregi
 
 ## Citation
 
-Use [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). Archives on Zenodo: [10.5281/zenodo.23870201](https://doi.org/10.5281/zenodo.23870201) for release v2026.11.0 (commit `455e4c2`, the analysis above); [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831) for v2026.11.1, the preregistration of the follow-up runs; [10.5281/zenodo.23888058](https://doi.org/10.5281/zenodo.23888058) for v2026.11.3 (commit `6de9fe5`), the follow-up results R1–R4, the figures and the R6 addendum (v2026.11.2, [10.5281/zenodo.23887990](https://doi.org/10.5281/zenodo.23887990), is an identical archive of the same commit, made three minutes earlier by a handling error); [10.5281/zenodo.23870200](https://doi.org/10.5281/zenodo.23870200) for all versions. The Zenodo record lists the code licence (MIT); the data files are under CC BY 4.0 ([`data/LICENSE`](data/LICENSE)).
+Use [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). Archives on Zenodo: [10.5281/zenodo.23870201](https://doi.org/10.5281/zenodo.23870201) for release v2026.11.0 (commit `455e4c2`, the analysis above); [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831) for v2026.11.1, the preregistration of the follow-up runs; [10.5281/zenodo.23888058](https://doi.org/10.5281/zenodo.23888058) for v2026.11.3 (commit `6de9fe5`), the follow-up results R1–R4, the figures and the R6 addendum (v2026.11.2, [10.5281/zenodo.23887990](https://doi.org/10.5281/zenodo.23887990), is an identical archive of the same commit, made three minutes earlier by a handling error); [10.5281/zenodo.23892810](https://doi.org/10.5281/zenodo.23892810) for v2026.11.4 (commit `9d2a280`), the R6 results, the R7 preregistration and the R5 materials; [10.5281/zenodo.23870200](https://doi.org/10.5281/zenodo.23870200) for all versions. The Zenodo record lists the code licence (MIT); the data files are under CC BY 4.0 ([`data/LICENSE`](data/LICENSE)).

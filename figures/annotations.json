@@ -950,5 +950,437 @@
   "value": 5.047420717808366,
   "source": "results/R2/R2_output_items0-39.json",
   "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "g",
+  "value": 0.6578262486057752,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "g_ci95_lo",
+  "value": 0.43525923020987756,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "g_ci95_hi",
+  "value": 0.8212027287694681,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "c",
+  "value": 1.8671250941974384,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "c_ci95_lo",
+  "value": 1.6045650374532634,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "c_ci95_hi",
+  "value": 2.142768726754075,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/critical/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "refusals",
+  "value": 1,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/critical/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording critical",
+  "label": "counter-statements (upper bound)",
+  "value": 3,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/critical/counter_statement"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "g",
+  "value": 0.27611847812616186,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "g_ci95_lo",
+  "value": 0.07318585539109643,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "g_ci95_hi",
+  "value": 0.47194600084661975,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "c",
+  "value": 4.0111759425493725,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "c_ci95_lo",
+  "value": 3.081658611528728,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "c_ci95_hi",
+  "value": 8.550178019493757,
+  "source": "results/R6/R6_llama_mild_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/praise/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "refusals",
+  "value": 16,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/praise/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Mild wording praise",
+  "label": "counter-statements (upper bound)",
+  "value": 8,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1mild/praise/counter_statement"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "g",
+  "value": 0.677797833935018,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "g_ci95_lo",
+  "value": 0.5345570257038538,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "g_ci95_hi",
+  "value": 0.8281056143380126,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "c",
+  "value": 1.3311850865512649,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "c_ci95_lo",
+  "value": 1.111382995156438,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "c_ci95_hi",
+  "value": 1.5703228675360401,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/critical/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "refusals",
+  "value": 0,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/critical/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) critical",
+  "label": "counter-statements (upper bound)",
+  "value": 12,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/critical/counter_statement"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "g",
+  "value": 0.5974729241877256,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "g_ci95_lo",
+  "value": 0.4097708618893884,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "g_ci95_hi",
+  "value": 0.7781825617751932,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "c",
+  "value": 2.845478348439073,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "c_ci95_lo",
+  "value": 2.5568299662159175,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "c_ci95_hi",
+  "value": 3.1997229447059907,
+  "source": "results/R6/R6_llama_standard_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/praise/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "refusals",
+  "value": 31,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/praise/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Standard wording (campaign 1) praise",
+  "label": "counter-statements (upper bound)",
+  "value": 23,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1standard/praise/counter_statement"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "g",
+  "value": 0.6286231884057971,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "g_ci95_lo",
+  "value": 0.4552964148927128,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "g_ci95_hi",
+  "value": 0.8364728228601345,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "c",
+  "value": 2.366685878962536,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "c_ci95_lo",
+  "value": 1.9971914958756056,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "c_ci95_hi",
+  "value": 2.707696500286862,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/critical/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "refusals",
+  "value": 1,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/critical/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording critical",
+  "label": "counter-statements (upper bound)",
+  "value": 43,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/critical/counter_statement"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "g",
+  "value": 0.7971014492753623,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "g_ci95_lo",
+  "value": 0.5981865123046979,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "g_ci95_hi",
+  "value": 0.985538300740884,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "c",
+  "value": 2.474545454545454,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "c_ci95_lo",
+  "value": 2.215142614791419,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "c_ci95_hi",
+  "value": 2.7126739083634908,
+  "source": "results/R6/R6_llama_strong_output_items30_K5.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "responses",
+  "value": 150,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/praise/n"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "refusals",
+  "value": 26,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/praise/refusal"
+ },
+ {
+  "figure": "F4",
+  "panel": "Strong wording praise",
+  "label": "counter-statements (upper bound)",
+  "value": 43,
+  "source": "results/R6/R6_descriptive_counts.json",
+  "json_path": "counts/llama~1strong/praise/counter_statement"
  }
 ]

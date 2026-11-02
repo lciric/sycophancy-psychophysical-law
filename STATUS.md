@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 19:12 Paris (18:12 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 19:38 Paris (18:38 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -21,7 +21,7 @@
 
 Each addendum fixes in advance what each of its outcomes means.
 
-**R7, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R7_monitor_deference.md`](preregistrations/2026-11-02_addendum_R7_monitor_deference.md)): the deference law of a *monitor*. Seven Qwen2.5 judges, 0.5B to 72B, read the 600 released unpressured responses with and without an in-band note claiming the verdict (three intensities, both directions); the gain g is fitted per size and its trend in log size estimated, by the frozen [`code/analyse_monitor.py`](code/analyse_monitor.py). It starts only after the addendum is archived on Zenodo and a budget is signed. Its inputs are ready: without a note, the monitor's prompt is the R1b prompt, byte for byte, on all 600 responses.
+**R7, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R7_monitor_deference.md`](preregistrations/2026-11-02_addendum_R7_monitor_deference.md)): the deference law of a *monitor*. Seven Qwen2.5 judges, 0.5B to 72B, read the 600 released unpressured responses with and without an in-band note claiming the verdict (three intensities, both directions); the gain g is fitted per size and its trend in log size estimated, by the frozen [`code/analyse_monitor.py`](code/analyse_monitor.py). Archived before any R7 reading in release v2026.11.4, [10.5281/zenodo.23892810](https://doi.org/10.5281/zenodo.23892810), 2 November 2026, 18:30 UTC. **Running** since 19:37, budget signed: a first wave of four machines (72B, 32B, 14B, 7B), then the three smaller sizes. Without a note, the monitor's prompt is the R1b prompt, byte for byte, on all 600 responses.
 
 R5 and the R3 secondary reading remain registered unchanged (see Later).
 
@@ -44,7 +44,7 @@ R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 ## Next, today
 
-1. Archive the R7 addendum (release v2026.11.4), run R7 (budget signed); then an independent recomputation, then `results/R7/`.
+1. Finish R7; then an independent recomputation, then `results/R7/`.
 2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
