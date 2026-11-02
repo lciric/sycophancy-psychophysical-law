@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 11:28 Paris (10:28 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 11:52 Paris (10:52 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -10,14 +10,14 @@
 |---|---|---|
 | **R2**: the model's own rating, no judge | the judge | C1 and C2 hold on the run (outcome A). Criticism: g = 0.63, R² = 0.91. Praise: g = 0.14 [0.03, 0.24]. C2 does not survive a change of llama.cpp implementation (independently re-checked). See [`results/R2/`](results/R2/README.md). |
 | **R1a**: open-weights judge (Qwen2.5-7B) on the released responses, 360 readings | the judge | C1 and C2 hold (outcome A), with a C2 margin of 0.53. Gains 0.74 and 0.73, against 0.72 and 0.68 with the original judge. See [`results/R1a/`](results/R1a/README.md). |
-| **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. A refusal sensitivity is pending. See [`results/R4/`](results/R4/README.md). |
+| **R4**: 60 new items written blind, committed before any generation | 30 items | C1–C4 hold (outcome A). The campaign-1 law with no refit explains R² = 0.68 (critical) and 0.58 (praise), against −0.28 and −0.01 for a constant shift. Without the items with refusals, all four criteria still hold. See [`results/R4/`](results/R4/README.md). |
 
 ## Running (times are Paris, 2 November)
 
 | run | what | state | expected |
 |---|---|---|---|
-| R3 | Qwen2.5-7B, Mistral-7B-v0.3, Gemma-2-9B; 40 items × 3 conditions × K = 10 | Qwen and Mistral generated and being judged; Gemma about 800 / 1 200 on two machines, with its resolution check running | Qwen and Mistral around 12:15; Gemma around 12:45 |
-| R1b | Qwen2.5-72B (bf16) as judge on all 1 200 released responses | started 11:14, downloading the model | after 12:30 |
+| R3 | Qwen2.5-7B, Mistral-7B-v0.3, Gemma-2-9B; 40 items × 3 conditions × K = 10 | Qwen and Mistral judged and independently recomputed, being deposited. Gemma passed its resolution check (primary family, see below); generation ends around 12:00, then the judge | Qwen and Mistral around 12:15; Gemma around 12:45 |
+| R1b | Qwen2.5-72B (bf16) as judge on all 1 200 released responses | 1 200 readings done at 11:34, independently recomputed, being deposited | around 12:15 |
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
@@ -26,7 +26,7 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 - **Quantisation in R1a and R2.** Q4_K_M on CPU, declared in the preregistration. R2 uses one BOS, the literal Llama-3.1 template; campaign 1 had two. R1a keeps Qwen's default system message, the literal "Qwen chat template".
 - **Generation.** R3 and R4 run the frozen campaign-1 sampling loop with a key–value cache ("route B"). On 20 out-of-family seeds per model, routes A and B gave 20 identical sequences out of 20. It is still declared as a deviation. Weights are fp32, as in campaign 1.
 - **Mistral-7B-v0.3** is loaded through TransformerLens's v0.1 converter. Its log-probabilities match transformers within 5 × 10⁻⁵, the same order as Qwen and Llama.
-- **Gemma-2-9B.** TransformerLens and transformers (sdpa attention) differ by up to 0.39 in log-probability. The likely cause is attention soft-capping, which sdpa does not apply. The rule was fixed before any Gemma output. Gemma counts as a primary R3 family if TransformerLens matches transformers with eager attention within 10⁻³. Otherwise it is reported as secondary, outside the R3 conclusion.
+- **Gemma-2-9B.** TransformerLens and transformers (sdpa attention) differ by up to 0.39 in log-probability. The likely cause is attention soft-capping, which sdpa does not apply. The rule was fixed before any Gemma output. Gemma counts as a primary R3 family if TransformerLens matches transformers with eager attention within 10⁻³. Otherwise it is reported as secondary, outside the R3 conclusion. **Result of the check:** the largest difference with eager attention is 6.7 × 10⁻⁵ (top-1 token identical at 38 positions out of 38), so Gemma is a primary family. With sdpa it stays 0.39, which confirms the cause.
 - **Judge.** `claude-opus-4-6`, temperature 0, the campaign-1 prompt. It reads every response in full: campaign-1 code truncated at 2,000 characters, but no campaign-1 response reached that length, so this matches what that judge actually read.
 - **Clocks.** One machine's clock runs at least 12 minutes fast, so the order of events is taken from GitHub push times.
 
@@ -40,8 +40,8 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 ## Next, today
 
 1. Judge R4 and R3 as their generations finish. Analyse with the frozen code. Run an independent recomputation, then publish here.
-2. Run the Gemma resolution check (TransformerLens against transformers with eager attention) before any Gemma response is read.
-3. Run R1b. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+2. Gemma resolution check: done, primary family. Judge Gemma once its generation ends.
+3. Publish R1b, and the argmax reading of R1a and R1b (preregistered as reported, §3 R1). Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 

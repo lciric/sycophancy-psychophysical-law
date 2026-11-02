@@ -34,11 +34,24 @@ Preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](../../p
 
 9 of the 900 responses are refusals ("I can't provide a subjective evaluation…"). All 9 are under praise, on items 40 (4 of 5), 37 (2 of 5), 18, 45 and 55, and the judge rated each of them 3. The released campaign-1 data contain 85 refusal-like responses in 1 200. Neither campaign 1 nor the preregistration excludes refusals, so they are kept, as there.
 
-A rating of 3 lies close to the praise target (3.2), so a refusal can look like attraction. A post hoc, descriptive sensitivity was fixed before its result was seen: (a) without the 9 refusals; (b) without items 37 and 40. It will be added here. The preregistered verdict remains the full run's.
+A rating of 3 lies close to the praise target (3.2), so a refusal can look like attraction. A post hoc, descriptive sensitivity was therefore fixed before its result was seen. The preregistered verdict remains the full run's.
+- (a), removing only the 9 refusals, is not computable under the frozen code, which requires the same K for every item (`load` in [`code/analyse_runs.py`](../../code/analyse_runs.py)). It was replaced, before any variant was seen, by (c).
+- (b) removes items 37 and 40 whole.
+- (c) removes whole the five items with a refusal (18, 37, 40, 45, 55), hence every refusal.
+
+| variant | items | g critical / praise | ĉ critical / praise | C2 margin | R² of the law out of sample (critical / praise) | praise: SSE(shift) − SSE(law) [95 % CI] | C1–C4 |
+|---|---|---|---|---|---|---|---|
+| full run | 60 | 0.821 / 0.617 | 1.333 / 3.225 | 1.448 | 0.683 / 0.579 | +30.2 [14.1, 47.4] | all hold |
+| (b) without 37 and 40 | 58 | 0.815 / 0.606 | 1.330 / 3.230 | 1.427 | 0.678 / 0.560 | +27.8 [12.0, 45.3] | all hold |
+| (c) without 18, 37, 40, 45, 55 | 55 | 0.817 / 0.592 | 1.345 / 3.273 | 1.445 | 0.677 / 0.534 | +24.2 [8.5, 40.6] | all hold |
+
+**The refusals do not carry outcome A**: all four criteria hold without them, and the praise gain barely moves.
+- Inputs: [`R4_sensitivity_refusals-b_input_items58.json`](R4_sensitivity_refusals-b_input_items58.json) and [`R4_sensitivity_refusals-c_input_items55.json`](R4_sensitivity_refusals-c_input_items55.json). Each is the run's input with whole items removed, nothing else changed. Each output sits beside its input.
+- Independent recomputation before publication: a fresh instance found each input identical to the run's except for the announced items, in both arms. It recounted 9 refusals, all under praise, reproduced both outputs byte for byte, and confirmed that the frozen code rejects (a). Verdict **conforming**; report SHA-256 `f29c3d6bcfa2485d235d550d203e068ebdfcce98d1eb49333b6131ff5bb8216c`, private.
 
 ## Verification
 
-- **Reproduce the analysis:** `python3 -I code/check_results.py` reruns the frozen analysis, with the out-of-sample criteria, on [`R4_input_items60.json`](R4_input_items60.json). It compares the result with the published output, and CI runs it on every push.
+- **Reproduce the analysis:** `python3 -I code/check_results.py` reruns the frozen analysis, with the out-of-sample criteria, on [`R4_input_items60.json`](R4_input_items60.json) and on both sensitivity inputs. It compares each result with the published output, and CI runs it on every push.
 - **Independent recomputation before publication:** a fresh instance worked from the raw files only.
   - Verdict: **conforming with reservations**. Report SHA-256 `ede071b56649bbc4f25e11aed62bb8af0addc1f39430bd9d1257c0f286c98825`, private.
   - What it checked: items identical to `7ccb3ec`, the plan, the prompts, the trial runs, and the 900 judge prompts and responses by hash. It rebuilt the analysis input and replayed the analysis byte for byte.
@@ -49,4 +62,4 @@ A rating of 3 lies close to the praise target (3.2), so a refusal can look like 
   - judgments: `a4ae0782ec1a5790f6c46ea00898029205c4a508427fa1c7b2141241f4a3d3b6`
   - analysis input: `4f62d51783d7fbb1…`
   - analysis output: `be92fa34b37351eb…`
-  - all in a private repository at commit `12d3444`.
+  - all in a private repository at commit `12d3444`; the refusal sensitivity at commit `c930026`.
