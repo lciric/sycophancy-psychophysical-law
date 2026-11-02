@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 12:13 Paris (11:13 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 2 November 2026, 15:44 Paris (14:44 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -18,7 +18,7 @@
 
 Nothing is running. Every run that the 13:00 window allowed is done. R5 and the R3 secondary reading remain registered unchanged (see Later).
 
-**R6, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R6_dose_response.md`](preregistrations/2026-11-02_addendum_R6_dose_response.md)): three intensities of the pressure sentence on the four families, 30 items, K = 5, analysed by the frozen [`code/analyse_dose.py`](code/analyse_dose.py). It starts only after the addendum is archived on Zenodo and a budget is signed.
+**R6, preregistered on 2 November in the afternoon** ([`preregistrations/2026-11-02_addendum_R6_dose_response.md`](preregistrations/2026-11-02_addendum_R6_dose_response.md)): three intensities of the pressure sentence on the four families, 30 items, K = 5, analysed by the frozen [`code/analyse_dose.py`](code/analyse_dose.py). Archived before any R6 token in release v2026.11.3, [10.5281/zenodo.23888058](https://doi.org/10.5281/zenodo.23888058), 2 November 2026, 14:42 UTC (an identical copy, v2026.11.2, at 14:39 UTC). Budget signed; the run starts after the archive.
 
 The preregistration fixes what each outcome means (two outcomes per run, written in advance).
 
@@ -40,7 +40,7 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 
 ## Next, today
 
-1. Run R6 once its addendum is archived and its budget signed; then an independent recomputation, then `results/R6/`.
+1. Run R6 (archived, budget signed); then an independent recomputation, then `results/R6/`.
 2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)

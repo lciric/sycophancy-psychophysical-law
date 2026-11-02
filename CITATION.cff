@@ -6,8 +6,8 @@ authors:
   - family-names: Ciric
     given-names: Lazar
     affiliation: ENS Paris-Saclay
-date-released: 2026-11-01
-version: "v2026.11.0"
+date-released: 2026-11-02
+version: "v2026.11.3"
 doi: 10.5281/zenodo.23870200
 identifiers:
   - type: doi
@@ -16,6 +16,12 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23870201
     description: "Version v2026.11.0 (commit 455e4c2)"
+  - type: doi
+    value: 10.5281/zenodo.23870831
+    description: "Version v2026.11.1: preregistration of the follow-up runs R1-R5"
+  - type: doi
+    value: 10.5281/zenodo.23888058
+    description: "Version v2026.11.3 (commit 6de9fe5): follow-up results R1-R4, figures, R6 addendum"
 repository-code: "https://github.com/lciric/sycophancy-psychophysical-law"
 license: MIT
 keywords:
