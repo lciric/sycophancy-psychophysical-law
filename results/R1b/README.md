@@ -22,6 +22,7 @@ Preregistered criteria: **C1 (attraction) and C2 (two destinations) hold, at ful
 - The gains are 0.65 (critical) and 0.74 (praise); campaign 1 had 0.72 and 0.68, R1a 0.74 and 0.73.
 - The targets, 1.88 and 2.99, lie closer to campaign 1's (1.46 and 2.94) than R1a's 7B reader did (2.35 and 3.34). Amplitude agreement across readers was not a criterion (§0).
 - With R1a, the "single judge family" limit recedes for these two readers: a 7B reader on a reduced sample, and a 72B reader on all responses.
+- This reader also sees the counter-intuitive prediction: the 12 items it rates above the praise target move *down* under praise, by −0.58 on average (permutation p = 1.6 × 10⁻³).
 
 ## Argmax reading (secondary)
 

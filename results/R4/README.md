@@ -29,6 +29,7 @@ Preregistered in [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](../../p
 - On 60 items nobody had seen when the law was fitted, the campaign-1 law predicts about two thirds (criticism) and three fifths (praise) of the displacement without any refitted parameter.
 - A constant shift does worse than predicting no change at all.
 - Refitted on the new items, the targets are close to campaign 1's (1.33 and 3.23, against 1.46 and 2.94).
+- The counter-intuitive prediction of the law held out of sample: 25 of the 60 new items sit above the praise target, and under praise they moved *down*, by −0.60 on average (intra-item permutation p = 2.5 × 10⁻⁵; `descent_above_target` in the output). A directional push cannot produce this.
 
 ## Refusals
 

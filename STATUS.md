@@ -40,7 +40,8 @@ The preregistration fixes what each outcome means (two outcomes per run, written
 
 ## Next, today
 
-1. Register the preregistration on OSF as well, mirroring the Zenodo archive.
+1. Run R6 once its addendum is archived and its budget signed; then an independent recomputation, then `results/R6/`.
+2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)
 

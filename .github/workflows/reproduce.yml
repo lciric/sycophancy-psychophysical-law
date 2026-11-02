@@ -25,3 +25,5 @@ jobs:
         run: python3 -I code/analyse_dose.py --selftest
       - name: Recompute every published follow-up result from its input
         run: python3 -I code/check_results.py
+      - name: Regenerate the figures from the published files and compare byte for byte
+        run: python3 -I code/make_figures.py --check

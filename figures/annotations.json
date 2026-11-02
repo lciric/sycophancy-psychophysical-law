@@ -1,0 +1,978 @@
+[
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "g",
+  "value": 0.7176875711325765,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "g_ci95_lo",
+  "value": 0.577249330524395,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "g_ci95_hi",
+  "value": 0.839097923037442,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "c",
+  "value": 1.45568793288063,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "c_ci95_lo",
+  "value": 1.2280648038131472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "c_ci95_hi",
+  "value": 1.6843817676519472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 critical",
+  "label": "R2",
+  "value": 0.7669395187003427,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/R2"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "R2_law",
+  "value": 0.6830229991635481,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/out_of_sample/critical/R2_law"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "R2_shift",
+  "value": -0.2803702827558743,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/out_of_sample/critical/R2_shift"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "g_free",
+  "value": 0.8214077627283685,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "g_free_ci95_lo",
+  "value": 0.7126282040281314,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "g_free_ci95_hi",
+  "value": 0.9234429938324226,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 critical",
+  "label": "c_free",
+  "value": 1.3331467716076375,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "g",
+  "value": 0.6778460716194548,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "g_ci95_lo",
+  "value": 0.530609508989099,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "g_ci95_hi",
+  "value": 0.8187234866969068,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "c",
+  "value": 2.9369012418687173,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "c_ci95_lo",
+  "value": 2.7369301666580834,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "c_ci95_hi",
+  "value": 3.183585704595472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "campaign-1 praise",
+  "label": "R2",
+  "value": 0.7873863693000159,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/R2"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "R2_law",
+  "value": 0.5794004846399912,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/out_of_sample/praise/R2_law"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "R2_shift",
+  "value": -0.013409459954952574,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/out_of_sample/praise/R2_shift"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "g_free",
+  "value": 0.6166284888778923,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "g_free_ci95_lo",
+  "value": 0.49862817763894224,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "g_free_ci95_hi",
+  "value": 0.7382487800022498,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F1",
+  "panel": "R4 praise",
+  "label": "c_free",
+  "value": 3.2253307100882767,
+  "source": "results/R4/R4_output_items60.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "g",
+  "value": 0.7176875711325765,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "g_ci95_lo",
+  "value": 0.577249330524395,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "g_ci95_hi",
+  "value": 0.839097923037442,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "c",
+  "value": 1.45568793288063,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "c_ci95_lo",
+  "value": 1.2280648038131472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct critical",
+  "label": "c_ci95_hi",
+  "value": 1.6843817676519472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "g",
+  "value": 0.6778460716194548,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "g_ci95_lo",
+  "value": 0.530609508989099,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "g_ci95_hi",
+  "value": 0.8187234866969068,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "c",
+  "value": 2.9369012418687173,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "c_ci95_lo",
+  "value": 2.7369301666580834,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Llama-3.1-8B-Instruct praise",
+  "label": "c_ci95_hi",
+  "value": 3.183585704595472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct critical",
+  "label": "g",
+  "value": 0.1180434978328253,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct critical",
+  "label": "g_ci95_lo",
+  "value": -0.06828912540107661,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct critical",
+  "label": "g_ci95_hi",
+  "value": 0.293458133232685,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct critical",
+  "label": "c",
+  "value": -2.7454456308563957,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct critical",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "g",
+  "value": 0.27384856786407874,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "g_ci95_lo",
+  "value": 0.0783066098576039,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "g_ci95_hi",
+  "value": 0.49516288157026733,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "c",
+  "value": 1.9985205711065164,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "c_ci95_lo",
+  "value": 0.33904001341998063,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "c_ci95_hi",
+  "value": 2.4495941532658048,
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Qwen2.5-7B-Instruct praise",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_qwen_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 critical",
+  "label": "g",
+  "value": 0.18705645060882992,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 critical",
+  "label": "g_ci95_lo",
+  "value": -0.015660906446792064,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 critical",
+  "label": "g_ci95_hi",
+  "value": 0.4340494412075321,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 critical",
+  "label": "c",
+  "value": -0.687766240681576,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 critical",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 praise",
+  "label": "g",
+  "value": 0.33320052790159116,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 praise",
+  "label": "g_ci95_lo",
+  "value": 0.07361124595123901,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 praise",
+  "label": "g_ci95_hi",
+  "value": 0.5721005143843652,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 praise",
+  "label": "c",
+  "value": 5.941192735968912,
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Mistral-7B-Instruct-v0.3 praise",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_mistral_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "g",
+  "value": 0.9247074679899528,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "g_ci95_lo",
+  "value": 0.8352742584999344,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "g_ci95_hi",
+  "value": 1.0112049141466728,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "c",
+  "value": 1.0951994169868824,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "c_ci95_lo",
+  "value": 0.9674257915973193,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "c_ci95_hi",
+  "value": 1.2262108241840974,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it critical",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "g",
+  "value": 0.20688598909514178,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "g_ci95_lo",
+  "value": -0.012765686046634485,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "g_ci95_hi",
+  "value": 0.45581560718926445,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "c",
+  "value": 3.535475273911756,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "c_ci95_lo",
+  "value": -1.2876739181895671,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "c_ci95_hi",
+  "value": 9.89339933807368,
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F2",
+  "panel": "Gemma-2-9B-it praise",
+  "label": "regime",
+  "value": "offset",
+  "source": "results/R3/R3_gemma_output_items40_K10.json",
+  "json_path": "analysis/regime"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "g",
+  "value": 0.7176875711325765,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "g_ci95_lo",
+  "value": 0.577249330524395,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "g_ci95_hi",
+  "value": 0.839097923037442,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "c",
+  "value": 1.45568793288063,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "c_ci95_lo",
+  "value": 1.2280648038131472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 critical",
+  "label": "c_ci95_hi",
+  "value": 1.6843817676519472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/critical/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "g",
+  "value": 0.6778460716194548,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "g_ci95_lo",
+  "value": 0.530609508989099,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "g_ci95_hi",
+  "value": 0.8187234866969068,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "c",
+  "value": 2.9369012418687173,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "c_ci95_lo",
+  "value": 2.7369301666580834,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge claude-opus-4-6 praise",
+  "label": "c_ci95_hi",
+  "value": 3.183585704595472,
+  "source": "code/expected.json",
+  "json_path": "campaign1/praise/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "g",
+  "value": 0.7402820610204406,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "g_ci95_lo",
+  "value": 0.5666928136775911,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "g_ci95_hi",
+  "value": 0.9526999883109724,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "c",
+  "value": 2.3493073232988633,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "c_ci95_lo",
+  "value": 2.112021481419547,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) critical",
+  "label": "c_ci95_hi",
+  "value": 2.5803437254777735,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "g",
+  "value": 0.7331928834898084,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "g_ci95_lo",
+  "value": 0.530421701593961,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "g_ci95_hi",
+  "value": 0.914970880870187,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "c",
+  "value": 3.337704409484966,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "c_ci95_lo",
+  "value": 3.1081555545067037,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-7B (R1a) praise",
+  "label": "c_ci95_hi",
+  "value": 3.5649276015929336,
+  "source": "results/R1a/R1a_output_sample360.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "g",
+  "value": 0.6534700250921112,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "g_ci95_lo",
+  "value": 0.5222418978192208,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "g_ci95_hi",
+  "value": 0.7693169681242221,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "c",
+  "value": 1.88362412114853,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "c_ci95_lo",
+  "value": 1.6574585767114713,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) critical",
+  "label": "c_ci95_hi",
+  "value": 2.1183270650438453,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "g",
+  "value": 0.7387107576758718,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "g_ci95_lo",
+  "value": 0.6217851798772875,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "g_ci95_hi",
+  "value": 0.8590533995439077,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "c",
+  "value": 2.9903406515456945,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "c_ci95_lo",
+  "value": 2.8763538505535053,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "Judge Qwen2.5-72B (R1b) praise",
+  "label": "c_ci95_hi",
+  "value": 3.1091467077831854,
+  "source": "results/R1b/R1b_output_items30_K10.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "g",
+  "value": 0.6246564941569557,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "g_ci95_lo",
+  "value": 0.5685101950426503,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "g_ci95_hi",
+  "value": 0.6797323004952519,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "c",
+  "value": 2.871220277096752,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "c_ci95_lo",
+  "value": 2.8002457656819875,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) critical",
+  "label": "c_ci95_hi",
+  "value": 2.929811539699338,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/critical/c_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "g",
+  "value": 0.13667860989082015,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/g"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "g_ci95_lo",
+  "value": 0.02935846895209619,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/g_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "g_ci95_hi",
+  "value": 0.24224626429029122,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/g_ci95/1"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "c",
+  "value": 3.7236603098407586,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/c"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "c_ci95_lo",
+  "value": 2.991505458201703,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/c_ci95/0"
+ },
+ {
+  "figure": "F3",
+  "panel": "No judge: the model's own rating (R2) praise",
+  "label": "c_ci95_hi",
+  "value": 5.047420717808366,
+  "source": "results/R2/R2_output_items0-39.json",
+  "json_path": "analysis/arms/praise/c_ci95/1"
+ }
+]
