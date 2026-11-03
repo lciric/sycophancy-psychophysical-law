@@ -1,6 +1,6 @@
 # Follow-up runs — status
 
-**Updated 2 November 2026, 21:54 Paris (20:54 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
+**Updated 3 November 2026, 11:22 Paris (10:22 UTC).** This file says what has been run, what is running, and what comes next. Every result enters [`results/`](results/) only after an independent recomputation from its raw files. Raw files that contain item texts stay private and are identified by SHA-256.
 
 **Fixed before any data.** The preregistration [`preregistrations/2026-11-02_follow-up_runs_R1-R5.md`](preregistrations/2026-11-02_follow-up_runs_R1-R5.md) was archived on Zenodo before the first token: [10.5281/zenodo.23870831](https://doi.org/10.5281/zenodo.23870831), 1 November 2026, 23:03 UTC. The frozen analysis is [`code/analyse_runs.py`](code/analyse_runs.py). The 60 R4 items were committed before any R4 generation, in `7ccb3ec`, 00:11 UTC.
 
@@ -26,6 +26,10 @@ Each addendum fixes in advance what each of its outcomes means.
 
 **R8, preregistered on 2 November in the evening** ([`preregistrations/2026-11-02_addendum_R8_post_training_stages.md`](preregistrations/2026-11-02_addendum_R8_post_training_stages.md)): the law across the public post-training stages of the same base model, Llama-3.1-8B → Tülu 3 SFT → DPO → RLVR, beside Llama-3.1-8B-Instruct; frozen analysis [`code/analyse_stages.py`](code/analyse_stages.py). **R9, preregistered the same evening** ([`preregistrations/2026-11-02_addendum_R9_feature_specific_error_correction.md`](preregistrations/2026-11-02_addendum_R9_feature_specific_error_correction.md)): whether the pressure direction of Llama-3.1-8B-Instruct behaves like a feature under the error-correction instrument of Ferreira da Silva & Heimersheim (2026); frozen analysis [`code/analyse_fsec.py`](code/analyse_fsec.py). Both start only after this addendum is archived on Zenodo and a budget is signed.
 
+**Both addenda were archived in release v2026.11.5**, [10.5281/zenodo.23909891](https://doi.org/10.5281/zenodo.23909891), 3 November 2026, 06:49 UTC. R8 started at 08:01 UTC under its signed budget. R9 has not run.
+
+**R9-bis, written on 3 November before any forward pass of R9** ([`preregistrations/2026-11-03_addendum_R9bis_dose_curves.md`](preregistrations/2026-11-03_addendum_R9bis_dose_curves.md)): R9 is read as response curves over a window declared in advance (2° to 60°), against the random-difference and contrastive envelopes, and beside a neutral direction built from a sentence of the same register with no opinion. F1 becomes F1-curve and F3 becomes F3-curve; F2 and the outcomes are unchanged in form. The frozen analysis is [`code/analyse_fsec_bis.py`](code/analyse_fsec_bis.py); `code/analyse_fsec.py` stays as archived. R9 starts only after R9-bis is archived on Zenodo and a new budget naming it is signed.
+
 R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 ## Declared deviations and precisions, all fixed before the data they touch
@@ -47,7 +51,7 @@ R5 and the R3 secondary reading remain registered unchanged (see Later).
 
 ## Next, today
 
-1. Archive the R8 and R9 addenda (release v2026.11.5), sign their budgets, run them; then independent recomputations, then `results/R8/` and `results/R9/`.
+1. R8: finish the run, then the independent recomputation, then `results/R8/`. R9: archive R9-bis, sign its budget, run it; then the independent recomputation, then `results/R9/`.
 2. Register the preregistration on OSF as well, mirroring the Zenodo archive.
 
 ## Later (planned)

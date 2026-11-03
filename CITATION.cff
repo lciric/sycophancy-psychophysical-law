@@ -25,6 +25,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23892810
     description: "Version v2026.11.4 (commit 9d2a280): R6 results, R7 preregistration, R5 materials and R5-pilot notes"
+  - type: doi
+    value: 10.5281/zenodo.23909891
+    description: "Version v2026.11.5 (commit e5e960b): R7 results, R8 and R9 addenda"
 repository-code: "https://github.com/lciric/sycophancy-psychophysical-law"
 license: MIT
 keywords:

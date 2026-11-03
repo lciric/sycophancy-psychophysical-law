@@ -4,7 +4,8 @@ For each results/**/*_input_*.json, runs code/analyse_runs.py on it (with --oos 
 and checks that the 'analysis' section equals the one in the matching *_output_*.json, value for value. For each
 results/**/*_dose_output.json, reruns code/analyse_dose.py on the inputs its meta names and checks levels, dose,
 hypotheses and outcome; likewise *_monitor_output.json with code/analyse_monitor.py on its sibling *_manifest.json,
-*_stages_output.json with code/analyse_stages.py and *_fsec_output.json with code/analyse_fsec.py. Exit status 1 on any difference or missing file.
+*_stages_output.json with code/analyse_stages.py, *_fsec_output.json with code/analyse_fsec.py and *_fsecbis_output.json
+with code/analyse_fsec_bis.py (R9-bis). Exit status 1 on any difference or missing file.
 Usage: python3 -I code/check_results.py
 """
 import json
@@ -80,6 +81,17 @@ for out in fsec_outs:
     same = all(new[k] == ref[k] for k in ("directions", "pairs", "behaviour", "hypotheses", "outcome"))
     print(("OK       " if same else "DIFFERS  ") + str(out.relative_to(ROOT)))
     bad += not same
+fsecbis_outs = sorted(ROOT.glob("results/**/*_fsecbis_output.json"))
+for out in fsecbis_outs:
+    ref = json.loads(out.read_text())
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_out = Path(tmp) / "out.json"
+        subprocess.run([sys.executable, "-I", "-B", str(ROOT / "code" / "analyse_fsec_bis.py"), ref["meta"]["input"], "--json", str(tmp_out)], cwd=ROOT, check=True, capture_output=True, text=True)
+        new = json.loads(tmp_out.read_text())
+    same = all(new[k] == ref[k] for k in ("envelopes", "directions", "pairs", "behaviour", "hypotheses", "outcome"))
+    print(("OK       " if same else "DIFFERS  ") + str(out.relative_to(ROOT)))
+    bad += not same
+fsec_outs = fsec_outs + fsecbis_outs
 if bad:
     sys.exit(f"CHECK FAILED: {bad} result(s) differ or are missing")
 print(f"CHECK PASSED: {len(inputs)} published result(s), {len(doses)} dose-response, {len(monitor_outs)} monitor, {len(stage_outs)} stage and {len(fsec_outs)} error-correction result(s) recomputed from their inputs")
